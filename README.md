@@ -25,7 +25,7 @@ malloc, free, write, va_start, va_arg, va_copy, va_end
 
 yes
 
-# Description
+## Description
 Write a library that contains ft_printf, a function that will mimic the real printf
 
 ft_printf의 프로토타입은 int ft_printf(const char *, …); 이여야 합니다.
