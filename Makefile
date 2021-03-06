@@ -20,7 +20,7 @@ CFALGS	= -Wall -Wextra -Werror
 
 all : $(NAME)
 
-.c.o :
+%.o: %.c %.h
 	$(CC) $(CFALGS) -c $< -o $(<:.c=.o)
 
 $(NAME) : $(OBJS)
