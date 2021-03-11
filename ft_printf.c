@@ -11,9 +11,27 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int		ft_printf(const char *, ...)
+#include <stdio.h>
+int		ft_printf(const char *str, ...)
 {
-	
+	int num;
+	int i;
+
+	va_list ap;
+	i = 0;
+	va_start(ap, str);
+	while (str[i] != '\0')
+	{
+		num = va_arg(ap, int);
+	}
+	va_end(ap);
+	printf("num : %d", num);
+	return (0);
+}
+
+int main()
+{
+	printf("test");
+	ft_printf("this is %dth.", 6);
 	return (0);
 }
