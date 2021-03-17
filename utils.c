@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsungk <minsungk@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
-/*   Updated: 2021/03/06 09:12:29 by minsungk         ###   ########.fr       */
+/*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
+/*   Updated: 2021/03/17 19:25:50 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <stdarg.h>
-# include <stdlib.h>
-
-typedef struct	s_flag
+int		ft_putchar(char c)
 {
-	int		minus;
-	int		zero;
-	int		width;
-	int		prec;
-	char	type;
-}				t_flag;
-
-int		ft_printf(const char *, ...);
-
-/*
-********util
-*/
-int		ft_putchar(char c);
-
-#endif
+	write(1, &c, 1);
+	return (1);
+}
