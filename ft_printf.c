@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "utils.c"
 #include <stdio.h>
 
 int		ft_printf(const char *str, ...)
