@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "utils.c"
 #include <stdio.h>
 
 int		ft_printf(const char *str, ...)
@@ -25,6 +26,7 @@ int		ft_printf(const char *str, ...)
 		return (-1);
 	va_start(ap, str);
 	i = 0;
+	sum = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] != '%' && str[i] != '\0')
