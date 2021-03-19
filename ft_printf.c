@@ -12,7 +12,11 @@
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 int		format_type(va_list ap, t_flag *info)
+=======
+int		ft_printf(const char *str, ...)
+>>>>>>> 3fada60... test
 {
 	int sum;
 
