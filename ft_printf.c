@@ -13,8 +13,7 @@
 #include "ft_printf.h"
 #include "utils.c"
 #include <stdio.h>
-
-int		ft_printf(const char *str, ...)
+int		main
 {
 	va_list 	ap;
 	int			i;
@@ -43,6 +42,6 @@ int main()
 	int num;
 	num = printf("test->%-10.3d<-\n", 5);
 	printf("%d", num);
-	//ft_printf("ft_printf ----->%-10.3d<-----", 5);
+	ft_printf("ft_printf ----->%-10.3d<-----", 5);
 	return (0);
 }
