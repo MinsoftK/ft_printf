@@ -11,9 +11,14 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+<<<<<<< HEAD
 #include "utils.c"
 #include <stdio.h>
 int		main
+=======
+
+int		ft_printf(const char *str, ...)
+>>>>>>> f8de38c9b152e79bca1674c47460e4057bdd4491
 {
 	va_list 	ap;
 	int			i;
@@ -30,7 +35,7 @@ int		main
 	{
 		while (str[i] != '%' && str[i] != '\0')
 		{
-			sum += ft_putchar(str[i]);
+			sum += ft_putchar(str[i++]);
 		}
 	}
 
