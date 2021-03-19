@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "utils.c"
-#include <stdio.h>
 
 int		ft_printf(const char *str, ...)
 {
@@ -31,7 +29,7 @@ int		ft_printf(const char *str, ...)
 	{
 		while (str[i] != '%' && str[i] != '\0')
 		{
-			sum += ft_putchar(str[i]);
+			sum += ft_putchar(str[i++]);
 		}
 	}
 
