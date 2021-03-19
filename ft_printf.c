@@ -25,6 +25,7 @@ int		ft_printf(const char *str, ...)
 		return (-1);
 	va_start(ap, str);
 	i = 0;
+	sum = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] != '%' && str[i] != '\0')
@@ -41,6 +42,6 @@ int main()
 	int num;
 	num = printf("test->%-10.3d<-\n", 5);
 	printf("%d", num);
-	ft_printf("ft_printf ----->%-10.3d<-----", 5);
+	//ft_printf("ft_printf ----->%-10.3d<-----", 5);
 	return (0);
 }
