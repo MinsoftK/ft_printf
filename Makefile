@@ -15,8 +15,12 @@ RM		= rm -f
 SRCS	= ft_printf.c
 OBJS 	= $(SRCS:.c=.o)
 CC		= gcc
+<<<<<<< HEAD
 CFALGS	= -Wall -Wextra -Werror 
 INCLUDE = -Iinclude
+=======
+CFALGS	= -Wall -Wextra -Werror -Iinclude
+>>>>>>> 3fada60dd5c84bcfe536ab10bdd06d09b8b106c8
 
 all : $(NAME)
 
@@ -35,6 +39,14 @@ fclean :
 
 re:
 	fclean all
+<<<<<<< HEAD
 
 bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
 	ar rc $(NAME) $(BOBJS) $(OBJS) $(POBJS)
+=======
+bonus:
+
+
+
+
+>>>>>>> 3fada60dd5c84bcfe536ab10bdd06d09b8b106c8
