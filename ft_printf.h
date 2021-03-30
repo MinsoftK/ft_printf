@@ -6,7 +6,11 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
+=======
+/*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
+>>>>>>> a8e0b1f... printf 작성중
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +65,13 @@ char **temp, int i);
 /*
 ****************Util***********
 */
+<<<<<<< HEAD
 
 void			init_info(t_flag *info);
 int				make_info(t_flag *info);
 int				ft_nbrlen(unsigned long long nbr, t_flag *info);
 char			*nbr_baseset(char type);
+=======
+>>>>>>> a8e0b1f... printf 작성중
 
 #endif

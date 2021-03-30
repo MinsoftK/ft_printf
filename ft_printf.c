@@ -6,7 +6,11 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
+=======
+/*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
+>>>>>>> a8e0b1f... printf 작성중
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +92,7 @@ int		parse_format(va_list ap, char *str)
 	while (str[i] != '\0')
 	{
 		while (str[i] != '%' && str[i] != '\0')
+<<<<<<< HEAD
 			sum += ft_putchar_fd(str[i++]);
 		if (str[i] == '%')
 		{
@@ -102,6 +107,12 @@ int		parse_format(va_list ap, char *str)
 		if (str[i] == '-')
 		{
 			sum += ft_putchar
+=======
+			sum += ft_putchar(str[i++]);
+		if (str[i] == '%')
+		{
+			
+>>>>>>> a8e0b1f... printf 작성중
 		}
 	}
 	free(info);
