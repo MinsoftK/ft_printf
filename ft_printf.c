@@ -7,18 +7,30 @@
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
 >>>>>>> a8e0b1f... printf 작성중
+=======
+/*   Updated: 2021/03/30 16:47:00 by minsungk         ###   ########.fr       */
+>>>>>>> 6e98197... test
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 int		format_type(va_list ap, t_flag *info)
 =======
+=======
+int		check_format()
+{
+
+}
+
+>>>>>>> 6e98197... test
 int		ft_printf(const char *str, ...)
 >>>>>>> 3fada60... test
 {
@@ -111,8 +123,34 @@ int		parse_format(va_list ap, char *str)
 			sum += ft_putchar(str[i++]);
 		if (str[i] == '%')
 		{
+<<<<<<< HEAD
 			
 >>>>>>> a8e0b1f... printf 작성중
+=======
+			info->minus = 0;
+			info->zero = 0;
+			info->width = 0;
+			info->prec = 0;
+			info->type = 0;
+			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
+			{
+				if (str[i] == '-')
+					info->minus = 1;
+				else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+					info->zero = 1;
+				else if (str[i] == '.')
+					info->prec = 1;
+				else if (ft_isdigit(str[i]) || str[i] == '*')
+				{
+					if (ft_isdigit(str[i]))
+					{
+						if (info->prec == 0)
+							info->width
+					}
+				}
+
+			}
+>>>>>>> 6e98197... test
 		}
 	}
 	free(info);
