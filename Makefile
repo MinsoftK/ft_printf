@@ -7,6 +7,7 @@
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/06 20:24:54 by minsungk          #+#    #+#              #
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -25,6 +26,9 @@ CFALGS		= -Wall -Wextra -Werror -Iinclude
 	$(CC) $(CFALGS) -c $< -o $(<:.c=.o) -I$(INCS)
 =======
 #    Updated: 2021/03/08 18:36:16 by minsungk         ###   ########.fr        #
+=======
+#    Updated: 2021/03/30 16:48:10 by minsungk         ###   ########.fr        #
+>>>>>>> 32d480c... test
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +37,12 @@ RM		= rm -f
 SRCS	= ft_printf.c
 OBJS 	= $(SRCS:.c=.o)
 CC		= gcc
+<<<<<<< HEAD
 CFALGS	= -Wall -Wextra -Werror 
 INCLUDE = -Iinclude
+=======
+CFALGS	= -Wall -Wextra -Werror -Iinclude
+>>>>>>> 32d480c... test
 
 all : $(NAME)
 
@@ -73,4 +81,7 @@ re:
 
 bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
 	ar rc $(NAME) $(BOBJS) $(OBJS) $(POBJS)
+<<<<<<< HEAD
 >>>>>>> ccb5aa7... test
+=======
+>>>>>>> 32d480c... test
