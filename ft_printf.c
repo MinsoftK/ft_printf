@@ -6,11 +6,16 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/03/30 16:47:00 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int		check_format()
+{
+
+}
 
 int		ft_printf(const char *str, ...)
 {
@@ -31,7 +36,29 @@ int		ft_printf(const char *str, ...)
 			sum += ft_putchar(str[i++]);
 		if (str[i] == '%')
 		{
-			
+			info->minus = 0;
+			info->zero = 0;
+			info->width = 0;
+			info->prec = 0;
+			info->type = 0;
+			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
+			{
+				if (str[i] == '-')
+					info->minus = 1;
+				else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+					info->zero = 1;
+				else if (str[i] == '.')
+					info->prec = 1;
+				else if (ft_isdigit(str[i]) || str[i] == '*')
+				{
+					if (ft_isdigit(str[i]))
+					{
+						if (info->prec == 0)
+							info->width
+					}
+				}
+
+			}
 		}
 	}
 
