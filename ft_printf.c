@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/03/30 19:54:48 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/03/30 19:56:57 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,11 @@ int		ft_printf(const char *str, ...)
 					}
 					else if (str[i] == '*')
 					{
-						if ()
+						if (info->prec == - 1)
+						{
+							
+						}
+						else
 					}
 				}
 
