@@ -8,6 +8,7 @@
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -15,6 +16,9 @@
 =======
 /*   Updated: 2021/03/30 16:47:00 by minsungk         ###   ########.fr       */
 >>>>>>> 6e98197... test
+=======
+/*   Updated: 2021/03/30 19:54:48 by minsungk         ###   ########.fr       */
+>>>>>>> 574be6f... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +134,7 @@ int		parse_format(va_list ap, char *str)
 			info->minus = 0;
 			info->zero = 0;
 			info->width = 0;
-			info->prec = 0;
+			info->prec = -1;
 			info->type = 0;
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 			{
@@ -139,13 +143,19 @@ int		parse_format(va_list ap, char *str)
 				else if (str[i] == '0' && info->width == 0 && info->prec == 0)
 					info->zero = 1;
 				else if (str[i] == '.')
-					info->prec = 1;
+					info->prec = 0;
 				else if (ft_isdigit(str[i]) || str[i] == '*')
 				{
 					if (ft_isdigit(str[i]))
 					{
 						if (info->prec == 0)
-							info->width
+							info->width = info->width * 10 + str[i] - 48;
+						else
+							info->prec = info->prec * 10 + str[i] - 48;
+					}
+					else if (str[i] == '*')
+					{
+						if ()
 					}
 				}
 
