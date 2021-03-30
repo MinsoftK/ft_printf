@@ -6,7 +6,7 @@
 #    By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/06 20:24:54 by minsungk          #+#    #+#              #
-#    Updated: 2021/03/08 18:36:16 by minsungk         ###   ########.fr        #
+#    Updated: 2021/03/30 16:48:10 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,7 @@ RM		= rm -f
 SRCS	= ft_printf.c
 OBJS 	= $(SRCS:.c=.o)
 CC		= gcc
-<<<<<<< HEAD
-CFALGS	= -Wall -Wextra -Werror 
-INCLUDE = -Iinclude
-=======
 CFALGS	= -Wall -Wextra -Werror -Iinclude
->>>>>>> 3fada60dd5c84bcfe536ab10bdd06d09b8b106c8
 
 all : $(NAME)
 
@@ -39,14 +34,6 @@ fclean :
 
 re:
 	fclean all
-<<<<<<< HEAD
 
 bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
 	ar rc $(NAME) $(BOBJS) $(OBJS) $(POBJS)
-=======
-bonus:
-
-
-
-
->>>>>>> 3fada60dd5c84bcfe536ab10bdd06d09b8b106c8
