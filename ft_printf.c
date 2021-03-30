@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minsungk <minsungk@student.42.kr>          +#+  +:+       +#+        */
+/*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/03/06 09:14:42 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ int		ft_printf(const char *str, ...)
 	while (str[i] != '\0')
 	{
 		while (str[i] != '%' && str[i] != '\0')
-		{
 			sum += ft_putchar(str[i++]);
+		if (str[i] == '%')
+		{
+			
 		}
 	}
 
