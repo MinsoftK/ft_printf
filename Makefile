@@ -6,6 +6,7 @@
 #    By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/06 20:24:54 by minsungk          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -22,6 +23,24 @@ CFALGS		= -Wall -Wextra -Werror -Iinclude
 
 %.o : %.c
 	$(CC) $(CFALGS) -c $< -o $(<:.c=.o) -I$(INCS)
+=======
+#    Updated: 2021/03/08 18:36:16 by minsungk         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	= libftprintf.a
+RM		= rm -f
+SRCS	= ft_printf.c
+OBJS 	= $(SRCS:.c=.o)
+CC		= gcc
+CFALGS	= -Wall -Wextra -Werror 
+INCLUDE = -Iinclude
+
+all : $(NAME)
+
+%.o : %.c
+	$(CC) $(CFALGS) -c $< -o $(<:.c=.o) -I$(INCLUDE)
+>>>>>>> ccb5aa7... test
 
 $(NAME) : $(OBJS)
 	make all -C $(LIBFT)/
@@ -29,6 +48,7 @@ $(NAME) : $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 .PHONEY: clean
+<<<<<<< HEAD
 
 all : $(NAME)
 
@@ -41,3 +61,16 @@ fclean :
 	make fclean -C $(LIBFT)
 
 re:	fclean all
+=======
+clean : 
+	$(RM) $(OBJS)
+
+fclean :
+	$(RM) $(NAME)
+
+re:
+	fclean all
+
+bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
+	ar rc $(NAME) $(BOBJS) $(OBJS) $(POBJS)
+>>>>>>> ccb5aa7... test
