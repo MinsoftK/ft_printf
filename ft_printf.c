@@ -99,6 +99,10 @@ int		parse_format(va_list ap, char *str)
 				info->zero = 0;
 			sum += format_type(ap, info);
 		}
+		if (str[i] == '-')
+		{
+			sum += ft_putchar
+		}
 	}
 	free(info);
 	return (sum);
