@@ -31,6 +31,10 @@ int		ft_printf(const char *str, ...)
 		{
 			sum += ft_putchar(str[i++]);
 		}
+		if (str[i] == '-')
+		{
+			sum += ft_putchar
+		}
 	}
 
 	return (0);
