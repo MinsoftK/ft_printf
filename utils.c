@@ -12,13 +12,18 @@
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 void		init_info(t_flag *info)
+=======
+int		init_info(t_info *info)
+>>>>>>> eaba386... backup
 {
 	info->minus = 0;
 	info->zero = 0;
 	info->width = 0;
 	info->prec = -1;
 	info->type = 0;
+<<<<<<< HEAD
 	info->nbr_base = 10;
 	info->nbr_sign = 1;
 }
@@ -47,4 +52,6 @@ char		*nbr_baseset(char type)
 	else if (type == 'X')
 		return ("0123456789ABCDEF");
 	return (0);
+=======
+>>>>>>> eaba386... backup
 }

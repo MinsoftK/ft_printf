@@ -30,12 +30,39 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 int		format_type(va_list ap, t_flag *info)
 =======
 =======
 int		check_format()
+=======
+int		check_format(va_list ap, char *str, t_flag *info, int i)
+>>>>>>> eaba386... backup
 {
-
+	if (str[i] == '-')
+		info->minus = 1;
+	else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+		info->zero = 1;
+	else if (str[i] == '.')
+		info->prec = 0;
+	else if (ft_isdigit(str[i]) || str[i] == '*')
+	{
+		if (ft_isdigit(str[i]))
+		{
+			if (info->prec == 0)
+				info->width = info->width * 10 + str[i] - 48;
+			else
+				info->prec = info->prec * 10 + str[i] - 48;
+		}
+		else if (str[i] == '*')
+		{
+			if (info->prec == - 1)
+			{
+				
+			}
+			else
+		}
+	}
 }
 
 >>>>>>> 6e98197... test
@@ -132,6 +159,7 @@ int		parse_format(va_list ap, char *str)
 		if (str[i] == '%')
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			
 >>>>>>> a8e0b1f... printf 작성중
 =======
@@ -140,35 +168,21 @@ int		parse_format(va_list ap, char *str)
 			info->width = 0;
 			info->prec = -1;
 			info->type = 0;
+=======
+			init_info(struct *info);
+>>>>>>> eaba386... backup
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
-			{
-				if (str[i] == '-')
-					info->minus = 1;
-				else if (str[i] == '0' && info->width == 0 && info->prec == 0)
-					info->zero = 1;
-				else if (str[i] == '.')
-					info->prec = 0;
-				else if (ft_isdigit(str[i]) || str[i] == '*')
-				{
-					if (ft_isdigit(str[i]))
-					{
-						if (info->prec == 0)
-							info->width = info->width * 10 + str[i] - 48;
-						else
-							info->prec = info->prec * 10 + str[i] - 48;
-					}
-					else if (str[i] == '*')
-					{
-						if (info->prec == - 1)
-						{
-							
-						}
-						else
-					}
-				}
+				check_format(ap, str, info, i);
 
+<<<<<<< HEAD
 			}
 >>>>>>> 6e98197... test
+=======
+		}
+		if (str[i] == '-')
+		{
+			sum += ft_putchar;
+>>>>>>> eaba386... backup
 		}
 	}
 	free(info);
