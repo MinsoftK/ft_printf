@@ -12,8 +12,11 @@
 
 #include "ft_printf.h"
 
-int		ft_putchar(char c)
+int		init_info(t_info *info)
 {
-	write(1, &c, 1);
-	return (1);
+	info->minus = 0;
+	info->zero = 0;
+	info->width = 0;
+	info->prec = -1;
+	info->type = 0;
 }

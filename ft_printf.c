@@ -12,9 +12,32 @@
 
 #include "ft_printf.h"
 
-int		check_format()
+int		check_format(va_list ap, char *str, t_flag *info, int i)
 {
-
+	if (str[i] == '-')
+		info->minus = 1;
+	else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+		info->zero = 1;
+	else if (str[i] == '.')
+		info->prec = 0;
+	else if (ft_isdigit(str[i]) || str[i] == '*')
+	{
+		if (ft_isdigit(str[i]))
+		{
+			if (info->prec == 0)
+				info->width = info->width * 10 + str[i] - 48;
+			else
+				info->prec = info->prec * 10 + str[i] - 48;
+		}
+		else if (str[i] == '*')
+		{
+			if (info->prec == - 1)
+			{
+				
+			}
+			else
+		}
+	}
 }
 
 int		ft_printf(const char *str, ...)
@@ -36,43 +59,14 @@ int		ft_printf(const char *str, ...)
 			sum += ft_putchar(str[i++]);
 		if (str[i] == '%')
 		{
-			info->minus = 0;
-			info->zero = 0;
-			info->width = 0;
-			info->prec = -1;
-			info->type = 0;
+			init_info(struct *info);
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
-			{
-				if (str[i] == '-')
-					info->minus = 1;
-				else if (str[i] == '0' && info->width == 0 && info->prec == 0)
-					info->zero = 1;
-				else if (str[i] == '.')
-					info->prec = 0;
-				else if (ft_isdigit(str[i]) || str[i] == '*')
-				{
-					if (ft_isdigit(str[i]))
-					{
-						if (info->prec == 0)
-							info->width = info->width * 10 + str[i] - 48;
-						else
-							info->prec = info->prec * 10 + str[i] - 48;
-					}
-					else if (str[i] == '*')
-					{
-						if (info->prec == - 1)
-						{
-							
-						}
-						else
-					}
-				}
+				check_format(ap, str, info, i);
 
-			}
 		}
 		if (str[i] == '-')
 		{
-			sum += ft_putchar
+			sum += ft_putchar;
 		}
 	}
 
