@@ -13,10 +13,14 @@
 #include "ft_printf.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void		init_info(t_flag *info)
 =======
 int		init_info(t_info *info)
 >>>>>>> eaba386... backup
+=======
+int		init_info(t_flag *info)
+>>>>>>> efa964b... fix error
 {
 	info->minus = 0;
 	info->zero = 0;

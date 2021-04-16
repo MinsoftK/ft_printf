@@ -68,13 +68,14 @@ char **temp, int i);
 =======
 int		ft_printf(const char *, ...);
 int		check_format(va_list ap, char *str, t_flag *info, int i);
-void	check_width_prec(va_list ap, char *str, t_info *info, int i);
-int		format_type(va_list ap, t_info* info);
+void	check_width_prec(va_list ap, char *str, t_flag *info, int i);
+int		format_type(va_list ap, t_flag* info);
 
 /*
 ****************Print***********
 >>>>>>> c59ed9d... Update header
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 void			init_info(t_flag *info);
@@ -84,5 +85,13 @@ char			*nbr_baseset(char type);
 =======
 >>>>>>> a8e0b1f... printf 작성중
 
+=======
+int		printf_char(int point, t_flag *info);
+int		put_width(int width, int len, int zero);
+/*
+****************Util***********
+*/
+int		init_info(t_flag *info);
+>>>>>>> efa964b... fix error
 
 #endif

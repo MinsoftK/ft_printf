@@ -10,10 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		printf_char(int point, t_info *info)
+#include "ft_printf.h"
+
+int		put_width(int width, int len, int zero)
+{
+	
+}
+
+int		printf_char(int point, t_flag *info)
 {
 	int sum;
 
 	sum = 0;
-	if (info->type)
+	if (info->type == '%' && info->minus == 1)
+		info->zero = 0;
+	if (info->minus == 1)
+		sum += ft_putchar(point);
 }
