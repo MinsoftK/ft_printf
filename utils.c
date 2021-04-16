@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int		init_info(t_info *info)
+int		init_info(t_flag *info)
 {
 	info->minus = 0;
 	info->zero = 0;
