@@ -105,7 +105,7 @@ int main()
 {
 	int num;
 	num = printf("test->%-10.3d<-\n", 5);
-	printf("%d", num);
-	ft_printf("ft_printf ----->%-10.3d<-----", 5);
+	printf("%-c",'a');
+//	ft_printf("ft_printf ----->%-10.3d<-----", 5);
 	return (0);
 }
