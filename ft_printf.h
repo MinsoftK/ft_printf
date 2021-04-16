@@ -29,10 +29,17 @@ typedef struct	s_flag
 	char	type;
 }				t_flag;
 
+/*
+****************Main***********
+*/
 int		ft_printf(const char *, ...);
+int		check_format(va_list ap, char *str, t_flag *info, int i);
+void	check_width_prec(va_list ap, char *str, t_info *info, int i);
+int		format_type(va_list ap, t_info* info);
 
 /*
-********util
+****************Print***********
 */
+
 
 #endif
