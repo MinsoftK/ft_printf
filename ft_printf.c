@@ -31,6 +31,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 int		format_type(va_list ap, t_flag *info)
 =======
 =======
@@ -38,18 +39,30 @@ int		check_format()
 =======
 int		check_format(va_list ap, char *str, t_flag *info, int i)
 >>>>>>> eaba386... backup
+=======
+int		format_type(va_list ap, t_info* info)
+>>>>>>> 84c1733... print type
 {
-	if (str[i] == '-')
-		info->minus = 1;
-	else if (str[i] == '0' && info->width == 0 && info->prec == 0)
-		info->zero = 1;
-	else if (str[i] == '.')
-		info->prec = 0;
-	else if (ft_isdigit(str[i]) || str[i] == '*')
-	{
-		if (ft_isdigit(str[i]))
+	if (info->type == 'c')
+		sum = printf_char(va_arg(ap, int), info);
+	else if (info->type == '%')
+		sum = printf_char('%', info);
+	else if (info->type == 's')
+		sum = printf_string(va_arg(ap))
+	else if (info->type == 'd' || type == 'i')
+		sum = printf_nbr(va_arg(ap, int), info);
+	else if (info->type == 'x' || type == 'X' || type == 'u')
+		sum = printf_nbr(va_arg(ap, unsigned int), info);
+	else if (info->type == 'p')
+		sum = printf_nbr(va_arg(ap, unsigned long long), info);
+	return (sum);
+}
+
+void	check_width_prec(va_list ap, char *str, t_info *info, int i)
+{
+			if (ft_isdigit(str[i]))
 		{
-			if (info->prec == 0)
+			if (info->prec == -1)
 				info->width = info->width * 10 + str[i] - 48;
 			else
 				info->prec = info->prec * 10 + str[i] - 48;
@@ -58,11 +71,28 @@ int		check_format(va_list ap, char *str, t_flag *info, int i)
 		{
 			if (info->prec == - 1)
 			{
-				
+				info->width = va_arg(ap, int);
+				if (info->width < 0)
+				{
+					info->minus = 1;
+					info->width *= -1;
+				}
 			}
 			else
+				info->prec = va_arg(ap, int);
 		}
-	}
+}
+
+int		check_format(va_list ap, char *str, t_flag *info, int i)
+{
+	if (str[i] == '-')
+		info->minus = 1;
+	else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+		info->zero = 1;
+	else if (str[i] == '.')
+		info->prec = 0;
+	else if (ft_isdigit(str[i]) || str[i] == '*')
+		check_width_prec(ap, str, info, i);	
 }
 
 >>>>>>> 6e98197... test
@@ -173,6 +203,7 @@ int		parse_format(va_list ap, char *str)
 >>>>>>> eaba386... backup
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 			}
@@ -183,6 +214,12 @@ int		parse_format(va_list ap, char *str)
 		{
 			sum += ft_putchar;
 >>>>>>> eaba386... backup
+=======
+			info->type = str[++i];
+			if ((info->minus == 1 || info->prec > -1) && info->type !='%')
+				info->zero = 0;
+			sum += format_type(ap, info);
+>>>>>>> 84c1733... print type
 		}
 	}
 	free(info);
