@@ -14,7 +14,19 @@
 
 int		put_width(int width, int len, int zero)
 {
-	
+	int		sum;
+
+	sum = 0;
+	while (len < width)
+	{
+		if (zero == 1)
+			ft_putchar('0');
+		else
+			ft_putchar(' ');
+		len++;
+		sum++;
+	}
+	return (sum);
 }
 
 int		printf_char(int point, t_flag *info)
