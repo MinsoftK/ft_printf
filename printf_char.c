@@ -26,4 +26,8 @@ int		printf_char(int point, t_flag *info)
 		info->zero = 0;
 	if (info->minus == 1)
 		sum += ft_putchar(point);
+	sum += put_width(info->width, 1, info->zero);
+	if (info->minus == 0)
+		sum += ft_putchar(point);
+	return (sum);
 }

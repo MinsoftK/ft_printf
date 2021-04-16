@@ -239,6 +239,7 @@ int		parse_format(va_list ap, char *str)
 
 int		ft_printf(const char *str, ...)
 {
+<<<<<<< HEAD
 	va_list		ap;
 	int			sum;
 
@@ -246,4 +247,11 @@ int		ft_printf(const char *str, ...)
 	sum = parse_format(ap, (char *)str);
 	va_end(ap);
 	return (sum);
+=======
+	int num;
+	num = printf("test->%-10.3d<-\n", 5);
+	printf("%-c",'a');
+//	ft_printf("ft_printf ----->%-10.3d<-----", 5);
+	return (0);
+>>>>>>> 8f3bd28... test
 }
