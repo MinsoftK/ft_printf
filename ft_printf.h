@@ -38,6 +38,7 @@ typedef struct	s_flag
 /*
 ****************Main***********
 */
+<<<<<<< HEAD
 
 int				ft_printf(const char *str, ...);
 int				parse_format(va_list ap, char *str);
@@ -64,6 +65,15 @@ char **temp, int i);
 
 /*
 ****************Util***********
+=======
+int		ft_printf(const char *, ...);
+int		check_format(va_list ap, char *str, t_flag *info, int i);
+void	check_width_prec(va_list ap, char *str, t_info *info, int i);
+int		format_type(va_list ap, t_info* info);
+
+/*
+****************Print***********
+>>>>>>> c59ed9d... Update header
 */
 <<<<<<< HEAD
 
@@ -73,5 +83,6 @@ int				ft_nbrlen(unsigned long long nbr, t_flag *info);
 char			*nbr_baseset(char type);
 =======
 >>>>>>> a8e0b1f... printf 작성중
+
 
 #endif
