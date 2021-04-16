@@ -12,6 +12,48 @@
 
 #include "ft_printf.h"
 
+int		format_type(va_list ap, t_info* info)
+{
+	if (info->type == 'c')
+		sum = printf_char(va_arg(ap, int), info);
+	else if (info->type == '%')
+		sum = printf_char('%', info);
+	else if (info->type == 's')
+		sum = printf_string(va_arg(ap))
+	else if (info->type == 'd' || type == 'i')
+		sum = printf_nbr(va_arg(ap, int), info);
+	else if (info->type == 'x' || type == 'X' || type == 'u')
+		sum = printf_nbr(va_arg(ap, unsigned int), info);
+	else if (info->type == 'p')
+		sum = printf_nbr(va_arg(ap, unsigned long long), info);
+	return (sum);
+}
+
+void	check_width_prec(va_list ap, char *str, t_info *info, int i)
+{
+			if (ft_isdigit(str[i]))
+		{
+			if (info->prec == -1)
+				info->width = info->width * 10 + str[i] - 48;
+			else
+				info->prec = info->prec * 10 + str[i] - 48;
+		}
+		else if (str[i] == '*')
+		{
+			if (info->prec == - 1)
+			{
+				info->width = va_arg(ap, int);
+				if (info->width < 0)
+				{
+					info->minus = 1;
+					info->width *= -1;
+				}
+			}
+			else
+				info->prec = va_arg(ap, int);
+		}
+}
+
 int		check_format(va_list ap, char *str, t_flag *info, int i)
 {
 	if (str[i] == '-')
@@ -21,23 +63,7 @@ int		check_format(va_list ap, char *str, t_flag *info, int i)
 	else if (str[i] == '.')
 		info->prec = 0;
 	else if (ft_isdigit(str[i]) || str[i] == '*')
-	{
-		if (ft_isdigit(str[i]))
-		{
-			if (info->prec == 0)
-				info->width = info->width * 10 + str[i] - 48;
-			else
-				info->prec = info->prec * 10 + str[i] - 48;
-		}
-		else if (str[i] == '*')
-		{
-			if (info->prec == - 1)
-			{
-				
-			}
-			else
-		}
-	}
+		check_width_prec(ap, str, info, i);	
 }
 
 int		ft_printf(const char *str, ...)
@@ -62,15 +88,14 @@ int		ft_printf(const char *str, ...)
 			init_info(struct *info);
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
-
-		}
-		if (str[i] == '-')
-		{
-			sum += ft_putchar;
+			info->type = str[++i];
+			if ((info->minus == 1 || info->prec > -1) && info->type !='%')
+				info->zero = 0;
+			sum += format_type(ap, info);
 		}
 	}
-
-	return (0);
+	free(info);
+	return (sum);
 }
 
 int main()
