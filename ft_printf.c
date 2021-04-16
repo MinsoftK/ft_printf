@@ -32,6 +32,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 int		format_type(va_list ap, t_flag *info)
 =======
 =======
@@ -42,23 +43,29 @@ int		check_format(va_list ap, char *str, t_flag *info, int i)
 =======
 int		format_type(va_list ap, t_info* info)
 >>>>>>> 84c1733... print type
+=======
+int		format_type(va_list ap, t_flag* info)
+>>>>>>> ee0f69d... fix error
 {
+	int sum;
+
+	sum = 0;
 	if (info->type == 'c')
 		sum = printf_char(va_arg(ap, int), info);
 	else if (info->type == '%')
 		sum = printf_char('%', info);
 	else if (info->type == 's')
-		sum = printf_string(va_arg(ap))
-	else if (info->type == 'd' || type == 'i')
+		sum = printf_string(va_arg(ap, char*), info);
+	else if (info->type == 'd' || info->type == 'i')
 		sum = printf_nbr(va_arg(ap, int), info);
-	else if (info->type == 'x' || type == 'X' || type == 'u')
+	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
 		sum = printf_nbr(va_arg(ap, unsigned int), info);
 	else if (info->type == 'p')
 		sum = printf_nbr(va_arg(ap, unsigned long long), info);
 	return (sum);
 }
 
-void	check_width_prec(va_list ap, char *str, t_info *info, int i)
+void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 {
 			if (ft_isdigit(str[i]))
 		{
@@ -190,6 +197,7 @@ int		parse_format(va_list ap, char *str)
 		{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			
 >>>>>>> a8e0b1f... printf 작성중
 =======
@@ -201,6 +209,9 @@ int		parse_format(va_list ap, char *str)
 =======
 			init_info(struct *info);
 >>>>>>> eaba386... backup
+=======
+			init_info(info);
+>>>>>>> ee0f69d... fix error
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
 <<<<<<< HEAD
