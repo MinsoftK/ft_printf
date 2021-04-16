@@ -12,24 +12,27 @@
 
 #include "ft_printf.h"
 
-int		format_type(va_list ap, t_info* info)
+int		format_type(va_list ap, t_flag* info)
 {
+	int sum;
+
+	sum = 0;
 	if (info->type == 'c')
 		sum = printf_char(va_arg(ap, int), info);
 	else if (info->type == '%')
 		sum = printf_char('%', info);
 	else if (info->type == 's')
-		sum = printf_string(va_arg(ap))
-	else if (info->type == 'd' || type == 'i')
+		sum = printf_string(va_arg(ap, char*), info);
+	else if (info->type == 'd' || info->type == 'i')
 		sum = printf_nbr(va_arg(ap, int), info);
-	else if (info->type == 'x' || type == 'X' || type == 'u')
+	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
 		sum = printf_nbr(va_arg(ap, unsigned int), info);
 	else if (info->type == 'p')
 		sum = printf_nbr(va_arg(ap, unsigned long long), info);
 	return (sum);
 }
 
-void	check_width_prec(va_list ap, char *str, t_info *info, int i)
+void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 {
 			if (ft_isdigit(str[i]))
 		{
@@ -85,7 +88,7 @@ int		ft_printf(const char *str, ...)
 			sum += ft_putchar(str[i++]);
 		if (str[i] == '%')
 		{
-			init_info(struct *info);
+			init_info(info);
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
 			info->type = str[++i];
