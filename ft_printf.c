@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/03/30 19:56:57 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/20 14:41:25 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,6 @@ int main()
 	int num;
 	num = printf("test->%-10.3d<-\n", 5);
 	printf("%-c",'a');
-//	ft_printf("ft_printf ----->%-10.3d<-----", 5);
+	ft_printf("ft_printf ----->%-10.3d<-----", 5);
 	return (0);
 }
