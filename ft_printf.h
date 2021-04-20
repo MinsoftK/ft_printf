@@ -101,6 +101,7 @@ int		printf_char(int point, t_flag *info);
 int		print_char(int point, t_flag *info);
 >>>>>>> 8c77b60... fix makefile && Update printf
 int		put_width(int width, int len, int zero);
+int		print_string(char *str, t_flag *info);
 
 /*
 ****************Util***********

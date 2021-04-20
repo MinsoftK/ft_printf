@@ -36,6 +36,7 @@ void	init_info(t_flag *info)
 	info->prec = -1;
 	info->type = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	info->nbr_base = 10;
 	info->nbr_sign = 1;
 }
@@ -66,4 +67,8 @@ char		*nbr_baseset(char type)
 	return (0);
 =======
 >>>>>>> eaba386... backup
+=======
+	info->nbr_base = 10;
+	info->nbr_sign = 1;
+>>>>>>> 95e07a6... test
 }
