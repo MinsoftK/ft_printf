@@ -19,4 +19,6 @@ void	init_info(t_flag *info)
 	info->width = 0;
 	info->prec = -1;
 	info->type = 0;
+	info->nbr_base = 10;
+	info->nbr_sign = 1;
 }

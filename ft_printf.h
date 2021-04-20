@@ -45,6 +45,7 @@ int		format_type(va_list ap, t_flag* info);
 */
 int		print_char(int point, t_flag *info);
 int		put_width(int width, int len, int zero);
+int		print_string(char *str, t_flag *info);
 
 /*
 ****************Util***********
