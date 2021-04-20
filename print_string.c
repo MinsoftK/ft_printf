@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -71,12 +72,17 @@ int		put_width_str(char **str, t_flag *info)
 	return (info->width);
 }
 
+=======
+#include "ft_printf.h"
+
+>>>>>>> a138d87... update
 int		print_string(char *str, t_flag *info)
 {
 	int		sum;
 	char	*temp;
 
 	sum = 0;
+<<<<<<< HEAD
 	if (str == NULL)
 		str = "(null)";
 	if (info->prec == -1 || (size_t)info->prec > ft_strlen(str))
@@ -86,4 +92,8 @@ int		print_string(char *str, t_flag *info)
 	ft_putstr(temp);
 	free(temp);
 	return (sum);
+=======
+	while (str != '\0')
+	return(sum);
+>>>>>>> a138d87... update
 }

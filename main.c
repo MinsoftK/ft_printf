@@ -6,6 +6,7 @@
 int main()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int i = 198;
 	printf("-->|%-0.10d|<--\n", 198);
 	ft_printf("-->|%-0.10i|<--\n", i);
@@ -22,6 +23,9 @@ int main()
 >>>>>>> 72c2209... fix header
 =======
 	printf("--->|%c|<----\n", 'b');
+=======
+	printf("--->|%s|<----\n", "");
+>>>>>>> a138d87... update
 	ft_printf("--->|%%|<---- ", 'b');
 >>>>>>> acb77c4... string 처리 부분 시작
 }
