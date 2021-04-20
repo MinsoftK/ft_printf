@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_char.c                                      :+:      :+:    :+:   */
+/*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minsungk <minsungk@student.42.kr>          +#+  +:+       +#+        */
+/*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 15:05:23 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/16 15:05:25 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/20 16:24:00 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ int		put_width(int width, int len, int zero)
 	while (len < width)
 	{
 		if (zero == 1)
-			ft_putchar('0');
+			ft_putchar_fd('0');
 		else
-			ft_putchar(' ');
+			ft_putchar_fd(' ');
 		len++;
 		sum++;
 	}
 	return (sum);
 }
 
-int		printf_char(int point, t_flag *info)
+int		print_char(int point, t_flag *info)
 {
 	int sum;
 
@@ -37,9 +37,9 @@ int		printf_char(int point, t_flag *info)
 	if (info->type == '%' && info->minus == 1)
 		info->zero = 0;
 	if (info->minus == 1)
-		sum += ft_putchar(point);
+		sum += ft_putchar_fd(point);
 	sum += put_width(info->width, 1, info->zero);
 	if (info->minus == 0)
-		sum += ft_putchar(point);
+		sum += ft_putchar_fd(point);
 	return (sum);
 }

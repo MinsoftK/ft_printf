@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/20 14:41:25 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/20 16:15:04 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,18 @@ int		format_type(va_list ap, t_flag* info)
 
 	sum = 0;
 	if (info->type == 'c')
-		sum = printf_char(va_arg(ap, int), info);
+		sum = print_char(va_arg(ap, int), info);
 	else if (info->type == '%')
-		sum = printf_char('%', info);
-	else if (info->type == 's')
-		sum = printf_string(va_arg(ap, char*), info);
+		sum = print_char('%', info);
+	/*else if (info->type == 's')
+		sum = print_string(va_arg(ap, char*), info);
 	else if (info->type == 'd' || info->type == 'i')
-		sum = printf_nbr(va_arg(ap, int), info);
+		sum = print_nbr(va_arg(ap, int), info);
 	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
-		sum = printf_nbr(va_arg(ap, unsigned int), info);
+		sum = print_nbr(va_arg(ap, unsigned int), info);
 	else if (info->type == 'p')
-		sum = printf_nbr(va_arg(ap, unsigned long long), info);
+		sum = print_nbr(va_arg(ap, unsigned long long), info);
+	*/
 	return (sum);
 }
 
@@ -57,7 +58,7 @@ void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 		}
 }
 
-int		check_format(va_list ap, char *str, t_flag *info, int i)
+void	check_format(va_list ap, char *str, t_flag *info, int i)
 {
 	if (str[i] == '-')
 		info->minus = 1;
@@ -69,23 +70,21 @@ int		check_format(va_list ap, char *str, t_flag *info, int i)
 		check_width_prec(ap, str, info, i);	
 }
 
-int		ft_printf(const char *str, ...)
+int		parse_format(va_list ap, char *str)
 {
-	va_list 	ap;
-	int			i;
-	int			sum;
-	t_flag		*info;
+	int 	i;
+	int 	sum;
+	t_flag 	*info;
 
+	i = 0;
+	sum = 0;
 	info = malloc(sizeof(t_flag) * 1);
 	if (!info)
 		return (-1);
-	va_start(ap, str);
-	i = 0;
-	sum = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] != '%' && str[i] != '\0')
-			sum += ft_putchar(str[i++]);
+			sum += ft_putchar_fd(str[i++]);
 		if (str[i] == '%')
 		{
 			init_info(info);
@@ -101,11 +100,13 @@ int		ft_printf(const char *str, ...)
 	return (sum);
 }
 
-int main()
+int		ft_printf(const char *str, ...)
 {
-	int num;
-	num = printf("test->%-10.3d<-\n", 5);
-	printf("%-c",'a');
-	ft_printf("ft_printf ----->%-10.3d<-----", 5);
-	return (0);
+	va_list 	ap;
+	int			sum;
+
+	va_start(ap, str);
+	sum = parse_format(ap, (char *)str);
+	va_end(ap);
+	return (sum);
 }
