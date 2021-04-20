@@ -3,6 +3,6 @@
 
 int main()
 {
-	printf("%c\n", 'a');
-	ft_printf("--->|%c|<---- ", 'a');
+	printf("--->|%c|<----\n", 'b');
+	ft_printf("--->|%%|<---- ", 'b');
 }

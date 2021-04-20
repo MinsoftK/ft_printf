@@ -6,11 +6,12 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/20 16:15:04 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/20 17:41:49 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int		format_type(va_list ap, t_flag* info)
 {
@@ -18,11 +19,14 @@ int		format_type(va_list ap, t_flag* info)
 
 	sum = 0;
 	if (info->type == 'c')
+	{
 		sum = print_char(va_arg(ap, int), info);
+	}
 	else if (info->type == '%')
 		sum = print_char('%', info);
-	/*else if (info->type == 's')
+	else if (info->type == 's')
 		sum = print_string(va_arg(ap, char*), info);
+	/*
 	else if (info->type == 'd' || info->type == 'i')
 		sum = print_nbr(va_arg(ap, int), info);
 	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
@@ -90,7 +94,7 @@ int		parse_format(va_list ap, char *str)
 			init_info(info);
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
-			info->type = str[++i];
+			info->type = str[i++];
 			if ((info->minus == 1 || info->prec > -1) && info->type !='%')
 				info->zero = 0;
 			sum += format_type(ap, info);

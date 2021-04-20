@@ -6,7 +6,7 @@
 #    By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/06 20:24:54 by minsungk          #+#    #+#              #
-#    Updated: 2021/04/20 16:23:25 by minsungk         ###   ########.fr        #
+#    Updated: 2021/04/20 17:35:13 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,5 +40,4 @@ fclean :
 	$(RM) $(NAME)
 	make fclean -C $(LIBFT)
 
-re:
-	fclean all
+re:	fclean all
