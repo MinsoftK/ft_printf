@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -59,6 +60,9 @@ $(NAME) : $(OBJS)
 =======
 #    Updated: 2021/04/20 16:23:25 by minsungk         ###   ########.fr        #
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+#    Updated: 2021/04/20 17:35:13 by minsungk         ###   ########.fr        #
+>>>>>>> acb77c4... string 처리 부분 시작
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,6 +118,7 @@ fclean :
 	$(RM) $(NAME)
 	make fclean -C $(LIBFT)
 
+<<<<<<< HEAD
 re:
 	fclean all
 <<<<<<< HEAD
@@ -126,3 +131,6 @@ bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
 >>>>>>> 32d480c... test
 =======
 >>>>>>> da665fd... fix makefile
+=======
+re:	fclean all
+>>>>>>> acb77c4... string 처리 부분 시작

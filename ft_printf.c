@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -31,10 +32,14 @@
 =======
 /*   Updated: 2021/04/20 16:15:04 by minsungk         ###   ########.fr       */
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+/*   Updated: 2021/04/20 17:41:49 by minsungk         ###   ########.fr       */
+>>>>>>> acb77c4... string 처리 부분 시작
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,11 +64,14 @@ int		format_type(va_list ap, t_flag* info)
 
 	sum = 0;
 	if (info->type == 'c')
+	{
 		sum = print_char(va_arg(ap, int), info);
+	}
 	else if (info->type == '%')
 		sum = print_char('%', info);
-	/*else if (info->type == 's')
+	else if (info->type == 's')
 		sum = print_string(va_arg(ap, char*), info);
+	/*
 	else if (info->type == 'd' || info->type == 'i')
 		sum = print_nbr(va_arg(ap, int), info);
 	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
@@ -207,6 +215,7 @@ int		parse_format(va_list ap, char *str)
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
 			info->type = str[i++];
+<<<<<<< HEAD
 			if ((info->minus == 1 || info->prec > -1) && info->type != '%')
 				info->zero = 0;
 			sum += format_type(ap, info);
@@ -253,6 +262,8 @@ int		parse_format(va_list ap, char *str)
 >>>>>>> eaba386... backup
 =======
 			info->type = str[++i];
+=======
+>>>>>>> acb77c4... string 처리 부분 시작
 			if ((info->minus == 1 || info->prec > -1) && info->type !='%')
 				info->zero = 0;
 			sum += format_type(ap, info);
