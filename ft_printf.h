@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/20 16:24:27 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/20 16:40:48 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct	s_flag
 	int		width;
 	int		prec;
 	char	type;
+	int		nbr_base;
+	int		nbr_sign;
 }				t_flag;
 
 /*
