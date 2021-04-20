@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -55,14 +56,17 @@ $(NAME) : $(OBJS)
 	make all -C $(LIBFT)/
 =======
 #    Updated: 2021/04/20 15:28:47 by minsungk         ###   ########.fr        #
+=======
+#    Updated: 2021/04/20 16:23:25 by minsungk         ###   ########.fr        #
+>>>>>>> 8c77b60... fix makefile && Update printf
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
-LIBFT		=libft
-LIBFT_LIB	=libft.a
+LIBFT		= libft
+LIBFT_LIB	= libft.a
 RM			= rm -f
-SRCS		= ft_printf.c printf_char.c utils.c 
+SRCS		= ./ft_printf.c ./print_char.c ./utils.c 
 OBJS 		= $(SRCS:.c=.o)
 INCS		= .
 CC			= gcc
@@ -72,8 +76,12 @@ CFALGS		= -Wall -Wextra -Werror -Iinclude
 	$(CC) $(CFALGS) -c $< -o $(<:.c=.o) -I$(INCS)
 
 $(NAME) : $(OBJS)
+<<<<<<< HEAD
 	make all -C $(LIBFT)
 >>>>>>> da665fd... fix makefile
+=======
+	make all -C $(LIBFT)/
+>>>>>>> 8c77b60... fix makefile && Update printf
 	cp $(LIBFT)/$(LIBFT_LIB) $(NAME)
 	ar rc $(NAME) $(OBJS)
 

@@ -7,10 +7,14 @@
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
 >>>>>>> a8e0b1f... printf 작성중
+=======
+/*   Updated: 2021/04/20 16:24:27 by minsungk         ###   ########.fr       */
+>>>>>>> 8c77b60... fix makefile && Update printf
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +71,8 @@ char **temp, int i);
 ****************Util***********
 =======
 int		ft_printf(const char *, ...);
-int		check_format(va_list ap, char *str, t_flag *info, int i);
+int		parse_format(va_list ap, char *str);
+void	check_format(va_list ap, char *str, t_flag *info, int i);
 void	check_width_prec(va_list ap, char *str, t_flag *info, int i);
 int		format_type(va_list ap, t_flag* info);
 
@@ -75,6 +80,7 @@ int		format_type(va_list ap, t_flag* info);
 ****************Print***********
 >>>>>>> c59ed9d... Update header
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -87,11 +93,19 @@ char			*nbr_baseset(char type);
 
 =======
 int		printf_char(int point, t_flag *info);
+=======
+int		print_char(int point, t_flag *info);
+>>>>>>> 8c77b60... fix makefile && Update printf
 int		put_width(int width, int len, int zero);
+
 /*
 ****************Util***********
 */
+<<<<<<< HEAD
 int		init_info(t_flag *info);
 >>>>>>> efa964b... fix error
+=======
+void	init_info(t_flag *info);
+>>>>>>> 8c77b60... fix makefile && Update printf
 
 #endif

@@ -6,12 +6,17 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
+=======
+/*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
+>>>>>>> 8c77b60... fix makefile && Update printf
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 void		init_info(t_flag *info)
@@ -21,6 +26,9 @@ int		init_info(t_info *info)
 =======
 int		init_info(t_flag *info)
 >>>>>>> efa964b... fix error
+=======
+void	init_info(t_flag *info)
+>>>>>>> 8c77b60... fix makefile && Update printf
 {
 	info->minus = 0;
 	info->zero = 0;

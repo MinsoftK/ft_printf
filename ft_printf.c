@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -27,6 +28,9 @@
 =======
 /*   Updated: 2021/04/20 14:41:25 by minsungk         ###   ########.fr       */
 >>>>>>> da665fd... fix makefile
+=======
+/*   Updated: 2021/04/20 16:15:04 by minsungk         ###   ########.fr       */
+>>>>>>> 8c77b60... fix makefile && Update printf
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +59,18 @@ int		format_type(va_list ap, t_flag* info)
 
 	sum = 0;
 	if (info->type == 'c')
-		sum = printf_char(va_arg(ap, int), info);
+		sum = print_char(va_arg(ap, int), info);
 	else if (info->type == '%')
-		sum = printf_char('%', info);
-	else if (info->type == 's')
-		sum = printf_string(va_arg(ap, char*), info);
+		sum = print_char('%', info);
+	/*else if (info->type == 's')
+		sum = print_string(va_arg(ap, char*), info);
 	else if (info->type == 'd' || info->type == 'i')
-		sum = printf_nbr(va_arg(ap, int), info);
+		sum = print_nbr(va_arg(ap, int), info);
 	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
-		sum = printf_nbr(va_arg(ap, unsigned int), info);
+		sum = print_nbr(va_arg(ap, unsigned int), info);
 	else if (info->type == 'p')
-		sum = printf_nbr(va_arg(ap, unsigned long long), info);
+		sum = print_nbr(va_arg(ap, unsigned long long), info);
+	*/
 	return (sum);
 }
 
@@ -94,7 +99,7 @@ void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 		}
 }
 
-int		check_format(va_list ap, char *str, t_flag *info, int i)
+void	check_format(va_list ap, char *str, t_flag *info, int i)
 {
 	if (str[i] == '-')
 		info->minus = 1;
@@ -106,6 +111,7 @@ int		check_format(va_list ap, char *str, t_flag *info, int i)
 		check_width_prec(ap, str, info, i);	
 }
 
+<<<<<<< HEAD
 >>>>>>> 6e98197... test
 int		ft_printf(const char *str, ...)
 >>>>>>> 3fada60... test
@@ -176,10 +182,23 @@ int		parse_format(va_list ap, char *str)
 	i = 0;
 	sum = 0;
 	if (!(info = malloc(sizeof(t_flag) * 1)))
+=======
+int		parse_format(va_list ap, char *str)
+{
+	int 	i;
+	int 	sum;
+	t_flag 	*info;
+
+	i = 0;
+	sum = 0;
+	info = malloc(sizeof(t_flag) * 1);
+	if (!info)
+>>>>>>> 8c77b60... fix makefile && Update printf
 		return (-1);
 	while (str[i] != '\0')
 	{
 		while (str[i] != '%' && str[i] != '\0')
+<<<<<<< HEAD
 <<<<<<< HEAD
 			sum += ft_putchar_fd(str[i++]);
 		if (str[i] == '%')
@@ -197,6 +216,9 @@ int		parse_format(va_list ap, char *str)
 			sum += ft_putchar
 =======
 			sum += ft_putchar(str[i++]);
+=======
+			sum += ft_putchar_fd(str[i++]);
+>>>>>>> 8c77b60... fix makefile && Update printf
 		if (str[i] == '%')
 		{
 <<<<<<< HEAD
@@ -244,13 +266,18 @@ int		parse_format(va_list ap, char *str)
 int		ft_printf(const char *str, ...)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	va_list		ap;
+=======
+	va_list 	ap;
+>>>>>>> 8c77b60... fix makefile && Update printf
 	int			sum;
 
 	va_start(ap, str);
 	sum = parse_format(ap, (char *)str);
 	va_end(ap);
 	return (sum);
+<<<<<<< HEAD
 =======
 	int num;
 	num = printf("test->%-10.3d<-\n", 5);
@@ -258,4 +285,6 @@ int		ft_printf(const char *str, ...)
 	ft_printf("ft_printf ----->%-10.3d<-----", 5);
 	return (0);
 >>>>>>> 8f3bd28... test
+=======
+>>>>>>> 8c77b60... fix makefile && Update printf
 }
