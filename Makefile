@@ -8,6 +8,7 @@
 #    Created: 2021/03/06 20:24:54 by minsungk          #+#    #+#              #
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -52,10 +53,32 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	make all -C $(LIBFT)/
+=======
+#    Updated: 2021/04/20 15:28:47 by minsungk         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME		= libftprintf.a
+LIBFT		=libft
+LIBFT_LIB	=libft.a
+RM			= rm -f
+SRCS		= ft_printf.c printf_char.c utils.c 
+OBJS 		= $(SRCS:.c=.o)
+INCS		= .
+CC			= gcc
+CFALGS		= -Wall -Wextra -Werror -Iinclude
+
+%.o : %.c
+	$(CC) $(CFALGS) -c $< -o $(<:.c=.o) -I$(INCS)
+
+$(NAME) : $(OBJS)
+	make all -C $(LIBFT)
+>>>>>>> da665fd... fix makefile
 	cp $(LIBFT)/$(LIBFT_LIB) $(NAME)
 	ar rc $(NAME) $(OBJS)
 
 .PHONEY: clean
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 all : $(NAME)
@@ -70,14 +93,22 @@ fclean :
 
 re:	fclean all
 =======
+=======
+
+all : $(NAME)
+
+>>>>>>> da665fd... fix makefile
 clean : 
 	$(RM) $(OBJS)
+	make clean -C $(LIBFT)
 
 fclean :
 	$(RM) $(NAME)
+	make fclean -C $(LIBFT)
 
 re:
 	fclean all
+<<<<<<< HEAD
 
 bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
 	ar rc $(NAME) $(BOBJS) $(OBJS) $(POBJS)
@@ -85,3 +116,5 @@ bonus:	bonus:	$(OBJS) $(BOBJS) $(POBJS)
 >>>>>>> ccb5aa7... test
 =======
 >>>>>>> 32d480c... test
+=======
+>>>>>>> da665fd... fix makefile

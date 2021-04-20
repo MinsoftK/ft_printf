@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -23,6 +24,9 @@
 =======
 /*   Updated: 2021/03/30 19:56:57 by minsungk         ###   ########.fr       */
 >>>>>>> 24072ef... test
+=======
+/*   Updated: 2021/04/20 14:41:25 by minsungk         ###   ########.fr       */
+>>>>>>> da665fd... fix makefile
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,7 +255,7 @@ int		ft_printf(const char *str, ...)
 	int num;
 	num = printf("test->%-10.3d<-\n", 5);
 	printf("%-c",'a');
-//	ft_printf("ft_printf ----->%-10.3d<-----", 5);
+	ft_printf("ft_printf ----->%-10.3d<-----", 5);
 	return (0);
 >>>>>>> 8f3bd28... test
 }
