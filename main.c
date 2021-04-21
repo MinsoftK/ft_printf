@@ -3,6 +3,6 @@
 
 int main()
 {
-	printf("--->|%.2s|<----\n","abc");
+	printf("--->|%10s|<----\n","abc");
 	ft_printf("--->|%s|<---- ", NULL);
 }
