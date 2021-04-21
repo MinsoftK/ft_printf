@@ -4,5 +4,5 @@
 int main()
 {
 	printf("--->|%10s|<----\n","abc");
-	ft_printf("--->|%s|<---- ", NULL);
+	ft_printf("--->|%10s|<---- ", "abc");
 }
