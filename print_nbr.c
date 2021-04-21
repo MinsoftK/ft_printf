@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -115,4 +116,12 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 	ft_putstr(temp);
 	free(temp);
 	return (sum);
+=======
+#include "ft_printf.h"
+
+int print_nbr(unsigned long long nbr, t_flag *info)
+{
+
+	if (info->type == 'd')
+>>>>>>> f6873f0... print_nbr 작성 시작
 }
