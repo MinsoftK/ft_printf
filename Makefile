@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -63,6 +64,9 @@ $(NAME) : $(OBJS)
 =======
 #    Updated: 2021/04/20 17:35:13 by minsungk         ###   ########.fr        #
 >>>>>>> acb77c4... string 처리 부분 시작
+=======
+#    Updated: 2021/04/21 12:38:30 by minsungk         ###   ########.fr        #
+>>>>>>> 07a0d9c... print_string upload
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +74,7 @@ NAME		= libftprintf.a
 LIBFT		= libft
 LIBFT_LIB	= libft.a
 RM			= rm -f
-SRCS		= ./ft_printf.c ./print_char.c ./utils.c 
+SRCS		= ./ft_printf.c ./print_char.c ./print_string.c ./utils.c 
 OBJS 		= $(SRCS:.c=.o)
 INCS		= .
 CC			= gcc

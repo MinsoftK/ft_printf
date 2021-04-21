@@ -7,6 +7,7 @@ int main()
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int i = 198;
 	printf("-->|%-0.10d|<--\n", 198);
 	ft_printf("-->|%-0.10i|<--\n", i);
@@ -28,4 +29,8 @@ int main()
 >>>>>>> a138d87... update
 	ft_printf("--->|%%|<---- ", 'b');
 >>>>>>> acb77c4... string 처리 부분 시작
+=======
+	printf("--->|%.2s|<----\n","abc");
+	ft_printf("--->|%s|<---- ", NULL);
+>>>>>>> 07a0d9c... print_string upload
 }
