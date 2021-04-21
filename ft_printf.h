@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
@@ -23,6 +24,9 @@
 =======
 /*   Updated: 2021/04/21 15:05:08 by minsungk         ###   ########.fr       */
 >>>>>>> f6873f0... print_nbr 작성 시작
+=======
+/*   Updated: 2021/04/21 16:25:14 by minsungk         ###   ########.fr       */
+>>>>>>> 395bf79... nbr 처리]
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +48,7 @@ typedef struct	s_flag
 	int		prec;
 	char	type;
 	int		nbr_base;
-	int		nbr_sign;
+	int		nbr_sign = 1;
 }				t_flag;
 
 /*
@@ -106,6 +110,8 @@ int		print_char(int point, t_flag *info);
 >>>>>>> 8c77b60... fix makefile && Update printf
 int		put_width(int width, int len, int zero);
 int		print_string(char *str, t_flag *info);
+char	*prec_str(char *str, int prec_len, int len);
+int		put_width_str(char **str, t_flag *info);
 int		print_nbr(unsigned long long nbr, t_flag *info);
 
 /*
@@ -116,6 +122,10 @@ int		init_info(t_flag *info);
 >>>>>>> efa964b... fix error
 =======
 void	init_info(t_flag *info);
+<<<<<<< HEAD
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+int		ft_nbrlen(unsigned long long nbr, t_flag *info);
+>>>>>>> 395bf79... nbr 처리]
 
 #endif

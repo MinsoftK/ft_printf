@@ -7,10 +7,14 @@
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+/*   Updated: 2021/04/21 16:03:31 by minsungk         ###   ########.fr       */
+>>>>>>> 395bf79... nbr 처리]
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +45,16 @@ void	init_info(t_flag *info)
 	info->nbr_sign = 1;
 }
 
+<<<<<<< HEAD
 int			ft_nbrlen(unsigned long long nbr, t_flag *info)
+=======
+int		ft_nbrlen(unsigned long long nbr, t_flag *info)
+>>>>>>> 395bf79... nbr 처리]
 {
 	int i;
 
 	i = 0;
+<<<<<<< HEAD
 	if (nbr == 0 && info->prec != 0)
 		return (1);
 	while (nbr)
@@ -72,3 +81,14 @@ char		*nbr_baseset(char type)
 	info->nbr_sign = 1;
 >>>>>>> 95e07a6... test
 }
+=======
+	if (nbr == 0 || info->prec != 0)
+		return (1);
+	while(nbr)
+	{
+		nbr /= info->nbr_base;
+		i++;
+	}
+	return (i);
+}
+>>>>>>> 395bf79... nbr 처리]
