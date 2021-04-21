@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/21 16:03:31 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,19 @@ void	init_info(t_flag *info)
 	info->type = 0;
 	info->nbr_base = 10;
 	info->nbr_sign = 1;
+}
+
+int		ft_nbrlen(unsigned long long nbr, t_flag *info)
+{
+	int i;
+
+	i = 0;
+	if (nbr == 0 || info->prec != 0)
+		return (1);
+	while(nbr)
+	{
+		nbr /= info->nbr_base;
+		i++;
+	}
+	return (i);
 }

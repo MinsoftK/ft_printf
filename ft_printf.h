@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/21 15:05:08 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/21 16:25:14 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct	s_flag
 	int		prec;
 	char	type;
 	int		nbr_base;
-	int		nbr_sign;
+	int		nbr_sign = 1;
 }				t_flag;
 
 /*
@@ -46,11 +46,14 @@ int		format_type(va_list ap, t_flag* info);
 int		print_char(int point, t_flag *info);
 int		put_width(int width, int len, int zero);
 int		print_string(char *str, t_flag *info);
+char	*prec_str(char *str, int prec_len, int len);
+int		put_width_str(char **str, t_flag *info);
 int		print_nbr(unsigned long long nbr, t_flag *info);
 
 /*
 ****************Util***********
 */
 void	init_info(t_flag *info);
+int		ft_nbrlen(unsigned long long nbr, t_flag *info);
 
 #endif
