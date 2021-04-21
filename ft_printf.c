@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/21 14:29:58 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/21 15:06:42 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,12 @@ int		format_type(va_list ap, t_flag* info)
 		sum = print_char('%', info);
 	else if (info->type == 's')
 		sum = print_string(va_arg(ap, char*), info);
-	/*
 	else if (info->type == 'd' || info->type == 'i')
 		sum = print_nbr(va_arg(ap, int), info);
 	else if (info->type == 'x' || info->type == 'X' || info->type == 'u')
 		sum = print_nbr(va_arg(ap, unsigned int), info);
 	else if (info->type == 'p')
 		sum = print_nbr(va_arg(ap, unsigned long long), info);
-	*/
 	return (sum);
 }
 
