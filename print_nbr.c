@@ -2,7 +2,12 @@
 
 int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
 {
+	int		nbr_len;
+	int		sum;
+	int		i;
 
+	nbr_len = ft_nbrlen(nbr, info);
+	sum = (info->prec > nbr_len) ? info->prec : nbr_len; 
 }
 
 int 	print_nbr(unsigned long long nbr, t_flag *info)

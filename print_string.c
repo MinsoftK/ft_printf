@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-char	*tmp_str(char *str, int prec_len, int len)
+char	*prec_str(char *str, int prec_len, int len)
 {
 	int i;
 	char *temp;
