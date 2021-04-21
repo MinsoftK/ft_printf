@@ -25,8 +25,8 @@ int		put_width_str(char **str, t_flag *info)
 	int		len;
 	int		i;
 
-	if (info->width <= (int)ft_strlen(str))
-		return ((int)ft_strlen(str));
+	if (info->width <= (int)ft_strlen(*str))
+		return ((int)ft_strlen(*str));
 	len = info->width - ft_strlen(*str) + 1;
 	width = (char *)malloc (sizeof(char) * len);
 	i = 0;
