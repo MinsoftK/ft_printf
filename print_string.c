@@ -113,6 +113,13 @@ int		put_width_str(char **str, t_flag *info)
 		width[i] = (info->zero == 1) ? '0' : ' ';
 		i++;
 	}
+	width[i] = '\0';
+	if (info->minus == 0)
+		*str = ft_strjoin(width, *str);
+	else
+		*str = ft_strjoin(*str, width);
+	free(width);
+	return (info->width);
 }
 
 >>>>>>> 07a0d9c... print_string upload
