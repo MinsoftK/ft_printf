@@ -13,6 +13,7 @@
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 char	*prec_str(char *str, int prec_len, int str_len)
 {
 	int		i;
@@ -79,6 +80,9 @@ int		put_width_str(char **str, t_flag *info)
 >>>>>>> a138d87... update
 =======
 char	*tmp_str(char *str, int prec_len, int len)
+=======
+char	*prec_str(char *str, int prec_len, int len)
+>>>>>>> c04a4a7... nbr print 구현부
 {
 	int i;
 	char *temp;

@@ -121,11 +121,19 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 
 int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
 {
+	int		nbr_len;
+	int		sum;
+	int		i;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	if (info->type == 'd')
 >>>>>>> f6873f0... print_nbr 작성 시작
 =======
+=======
+	nbr_len = ft_nbrlen(nbr, info);
+	sum = (info->prec > nbr_len) ? info->prec : nbr_len; 
+>>>>>>> c04a4a7... nbr print 구현부
 }
 
 int 	print_nbr(unsigned long long nbr, t_flag *info)
