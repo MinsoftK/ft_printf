@@ -34,7 +34,11 @@ int main()
 	printf("--->|%.2s|<----\n","abc");
 =======
 	printf("--->|%10s|<----\n","abc");
+<<<<<<< HEAD
 >>>>>>> b6b3800... print_string
 	ft_printf("--->|%s|<---- ", NULL);
 >>>>>>> 07a0d9c... print_string upload
+=======
+	ft_printf("--->|%10s|<---- ", "abc");
+>>>>>>> ec14b7a... fix print space
 }
