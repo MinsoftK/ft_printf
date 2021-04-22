@@ -17,6 +17,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -51,6 +52,9 @@
 =======
 /*   Updated: 2021/04/21 15:06:42 by minsungk         ###   ########.fr       */
 >>>>>>> f6873f0... print_nbr 작성 시작
+=======
+/*   Updated: 2021/04/22 16:11:52 by minsungk         ###   ########.fr       */
+>>>>>>> 8799042... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -230,6 +234,7 @@ int		parse_format(va_list ap, char *str)
 				check_format(ap, str, info, i);
 			info->type = str[i++];
 <<<<<<< HEAD
+<<<<<<< HEAD
 			if ((info->minus == 1 || info->prec > -1) && info->type != '%')
 				info->zero = 0;
 			sum += format_type(ap, info);
@@ -279,6 +284,9 @@ int		parse_format(va_list ap, char *str)
 =======
 >>>>>>> acb77c4... string 처리 부분 시작
 			if ((info->minus == 1 || info->prec > -1) && info->type !='%')
+=======
+			if ((info->minus == 1 || info->prec > -1) && info->type != '%')
+>>>>>>> 8799042... test
 				info->zero = 0;
 			sum += format_type(ap, info);
 >>>>>>> 84c1733... print type

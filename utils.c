@@ -8,6 +8,7 @@
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
@@ -15,6 +16,9 @@
 =======
 /*   Updated: 2021/04/21 16:03:31 by minsungk         ###   ########.fr       */
 >>>>>>> 395bf79... nbr 처리]
+=======
+/*   Updated: 2021/04/22 16:25:41 by minsungk         ###   ########.fr       */
+>>>>>>> 8799042... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +95,18 @@ char		*nbr_baseset(char type)
 	}
 	return (i);
 }
+<<<<<<< HEAD
 >>>>>>> 395bf79... nbr 처리]
+=======
+
+char		*nbr_baseset(char type)
+{
+	if (type == 'u' || type == 'd' || type == 'i')
+		return ("0123456789");
+	else if (type == 'x' || type == 'p')
+		return ("0123456789abcdef");
+	else if (type == 'X')
+		return ("0123456789ABCDEF");
+	return (0);
+}
+>>>>>>> 8799042... test

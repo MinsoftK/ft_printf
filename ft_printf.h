@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
@@ -27,6 +28,9 @@
 =======
 /*   Updated: 2021/04/21 16:25:14 by minsungk         ###   ########.fr       */
 >>>>>>> 395bf79... nbr 처리]
+=======
+/*   Updated: 2021/04/22 15:53:42 by minsungk         ###   ########.fr       */
+>>>>>>> 8799042... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +52,7 @@ typedef struct	s_flag
 	int		prec;
 	char	type;
 	int		nbr_base;
-	int		nbr_sign = 1;
+	int		nbr_sign;
 }				t_flag;
 
 /*
@@ -126,6 +130,10 @@ void	init_info(t_flag *info);
 >>>>>>> 8c77b60... fix makefile && Update printf
 =======
 int		ft_nbrlen(unsigned long long nbr, t_flag *info);
+<<<<<<< HEAD
 >>>>>>> 395bf79... nbr 처리]
+=======
+char	*nbr_baseset(char type);
+>>>>>>> 8799042... test
 
 #endif

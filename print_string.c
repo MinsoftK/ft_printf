@@ -14,6 +14,7 @@
 #include "ft_printf.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 char	*prec_str(char *str, int prec_len, int str_len)
 {
 	int		i;
@@ -83,11 +84,14 @@ char	*tmp_str(char *str, int prec_len, int len)
 =======
 char	*prec_str(char *str, int prec_len, int len)
 >>>>>>> c04a4a7... nbr print 구현부
+=======
+char	*prec_str(char *str, int prec_len, int str_len)
+>>>>>>> 8799042... test
 {
 	int i;
 	char *temp;
 
-	prec_len = prec_len < len ? prec_len : len;
+	prec_len = prec_len < str_len ? prec_len : str_len;
 	temp = (char *)malloc(sizeof(char) * prec_len + 1);
 	if(!temp)
 		return (NULL);
@@ -99,6 +103,25 @@ char	*prec_str(char *str, int prec_len, int len)
 	}
 	temp[i] = '\0';
 	return (temp);
+}
+
+void	put_width_str_free(t_flag *info, char **str, char **width)
+{
+	char *temp;
+
+	if (info->minus == 0)
+	{
+		temp = *str;
+		*str = ft_strjoin(width, *str);
+		free (temp);
+	}
+	else
+	{
+		temp = *str;
+		*str = ft_strjoin(*str, width); //동적할당 해제
+		free (temp);
+	}
+	free(width);
 }
 
 int		put_width_str(char **str, t_flag *info)
@@ -118,11 +141,7 @@ int		put_width_str(char **str, t_flag *info)
 		i++;
 	}
 	width[i] = '\0';
-	if (info->minus == 0)
-		*str = ft_strjoin(width, *str);
-	else
-		*str = ft_strjoin(*str, width);
-	free(width);
+	put_width_str_free(info, str, &width);
 	return (info->width);
 }
 
@@ -152,7 +171,7 @@ int		print_string(char *str, t_flag *info)
 		str = "(null)";
 	if (info->prec == - 1 || (size_t)info->prec > ft_strlen(str))
 		info->prec = ft_strlen(str);
-	temp = tmp_str(str, info->prec, ft_strlen(str));
+	temp = prec_str(str, info->prec, ft_strlen(str));
 	sum = put_width_str(&temp, info);
 	ft_putstr(temp);
 	free(temp);

@@ -9,6 +9,7 @@ int main()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int i = 198;
 	printf("-->|%-0.10d|<--\n", 198);
 	ft_printf("-->|%-0.10i|<--\n", i);
@@ -41,4 +42,8 @@ int main()
 =======
 	ft_printf("--->|%10s|<---- ", "abc");
 >>>>>>> ec14b7a... fix print space
+=======
+	printf("--->|%0d|<----\n", -12);
+	ft_printf("--->|%.5d|<----",1000);
+>>>>>>> 8799042... test
 }
