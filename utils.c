@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/21 16:03:31 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/22 16:25:41 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,15 @@ int		ft_nbrlen(unsigned long long nbr, t_flag *info)
 		i++;
 	}
 	return (i);
+}
+
+char		*nbr_baseset(char type)
+{
+	if (type == 'u' || type == 'd' || type == 'i')
+		return ("0123456789");
+	else if (type == 'x' || type == 'p')
+		return ("0123456789abcdef");
+	else if (type == 'X')
+		return ("0123456789ABCDEF");
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/21 15:06:42 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/22 16:11:52 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int		parse_format(va_list ap, char *str)
 			while (str[++i] != '\0' && !(ft_strchr(TYPE, str[i])))
 				check_format(ap, str, info, i);
 			info->type = str[i++];
-			if ((info->minus == 1 || info->prec > -1) && info->type !='%')
+			if ((info->minus == 1 || info->prec > -1) && info->type != '%')
 				info->zero = 0;
 			sum += format_type(ap, info);
 		}
