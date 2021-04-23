@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/22 16:11:52 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/23 17:01:44 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	check_format(va_list ap, char *str, t_flag *info, int i)
 {
 	if (str[i] == '-')
 		info->minus = 1;
-	else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+	else if (str[i] == '0' && info->width == 0 && info->prec == -1)
 		info->zero = 1;
 	else if (str[i] == '.')
 		info->prec = 0;
