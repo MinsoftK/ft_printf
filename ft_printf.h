@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
@@ -31,6 +32,9 @@
 =======
 /*   Updated: 2021/04/22 15:53:42 by minsungk         ###   ########.fr       */
 >>>>>>> 8799042... test
+=======
+/*   Updated: 2021/04/23 14:32:08 by minsungk         ###   ########.fr       */
+>>>>>>> 0e4ebde... malloc error
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +121,10 @@ int		print_string(char *str, t_flag *info);
 char	*prec_str(char *str, int prec_len, int len);
 int		put_width_str(char **str, t_flag *info);
 int		print_nbr(unsigned long long nbr, t_flag *info);
+int		put_pointer(char **temp);
+int		put_minus(t_flag *info, char **temp);
+int		put_minus2(int nbr_len, t_flag *info, char **temp);
+int		put_prec(unsigned long long nbr, t_flag *info, char **temp);
 
 /*
 ****************Util***********

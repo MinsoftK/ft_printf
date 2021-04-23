@@ -119,10 +119,21 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 =======
 #include "ft_printf.h"
 
+int		put_pointer(char **temp)
+{
+	char *ptr;
+	ptr = *temp;
+	*temp = ft_strjoin("0x", *temp);
+	free(ptr);
+	return(2);
+}
+
 int		put_minus(t_flag *info, char **temp)
 {
 	char	*ptr;
+	int		sum;
 
+	sum = 0;
 	if ((info->type == 'i' || info->type == 'd') && info->nbr_sign == -1)
 	{
 		if (info->zero == 0)
@@ -130,14 +141,31 @@ int		put_minus(t_flag *info, char **temp)
 			ptr = *temp;
 			*temp = ft_strjoin("-", *temp);
 			free(ptr);
+			sum = 1;
 		}
-		else
-		{
-			
-		}
-		//유틸에 함수를 따로 만들어서 넣어주기 
 	}
-	return (1);
+	return (sum);
+}
+
+int		put_minus2(int nbr_len, t_flag *info, char **temp)
+{
+	int sum;
+	char *ptr;
+
+	sum = 0;
+	if (info->zero == 1 && info->nbr_sign == -1)
+	{
+		if (nbr_len >= info->width)
+		{
+			ptr = *temp;
+			*temp = ft_strjoin("-", *temp);
+			free(ptr);
+			sum = 1;
+		}
+		else if (nbr_len < info->width)
+			*temp[0] = '-';
+	}
+	return (sum);
 }
 
 int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
@@ -160,7 +188,7 @@ int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
 	res = (info->prec > nbr_len) ? info->prec : nbr_len;
 	*temp = (char *)malloc (sizeof(char) * res + 1);
 	if(!(*temp))
-		return (NULL);
+		return (0);
 	(*temp)[res] = '\0';
 	i = 0;
 	while(nbr_len + i < res)
@@ -197,7 +225,12 @@ int 	print_nbr(unsigned long long nbr, t_flag *info)
 	}
 	nbr_len = put_prec(nbr, info, &temp);
 	nbr_len += put_minus(info, &temp);
-
+	if (info->type == 'p')
+		nbr_len += put_pointer(&temp);
+	sum = put_width_str(&temp, info);
+	sum += put_minus2(nbr_len, info, &temp);
+	ft_putstr(temp);
+	free(temp);
 	return (sum);
 >>>>>>> 395bf79... nbr 처리]
 }

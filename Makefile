@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    Updated: 2021/04/24 16:28:07 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -67,6 +68,9 @@ $(NAME) : $(OBJS)
 =======
 #    Updated: 2021/04/21 12:38:30 by minsungk         ###   ########.fr        #
 >>>>>>> 07a0d9c... print_string upload
+=======
+#    Updated: 2021/04/23 14:32:42 by minsungk         ###   ########.fr        #
+>>>>>>> 0e4ebde... malloc error
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +78,7 @@ NAME		= libftprintf.a
 LIBFT		= libft
 LIBFT_LIB	= libft.a
 RM			= rm -f
-SRCS		= ./ft_printf.c ./print_char.c ./print_string.c ./utils.c 
+SRCS		= ./ft_printf.c ./print_char.c ./print_string.c ./print_nbr.c ./utils.c 
 OBJS 		= $(SRCS:.c=.o)
 INCS		= .
 CC			= gcc
