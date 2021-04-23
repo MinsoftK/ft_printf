@@ -229,7 +229,6 @@ int 	print_nbr(unsigned long long nbr, t_flag *info)
 	if (info->type == 'p')
 		nbr_len = put_pointer(&temp);
 	sum = put_width_str(&temp, info);
-	printf("%s\n", temp);
 	sum += put_minus2(nbr_len, info, &temp);
 	ft_putstr(temp);
 	free(temp);

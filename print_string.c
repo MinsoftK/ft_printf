@@ -132,7 +132,7 @@ int		put_width_str(char **str, t_flag *info)
 
 	if (info->width <= (int)ft_strlen(*str))
 		return ((int)ft_strlen(*str));
-	len = info->width - ft_strlen(*str);
+	len = info->width - (int)ft_strlen(*str);
 	width = (char *)malloc (sizeof(char) * len + 1);
 	i = 0;
 	while (i < len)

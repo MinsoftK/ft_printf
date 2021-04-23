@@ -18,6 +18,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -55,6 +56,9 @@
 =======
 /*   Updated: 2021/04/22 16:11:52 by minsungk         ###   ########.fr       */
 >>>>>>> 8799042... test
+=======
+/*   Updated: 2021/04/23 17:01:44 by minsungk         ###   ########.fr       */
+>>>>>>> dbdb21a... test is complete
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +133,7 @@ void	check_format(va_list ap, char *str, t_flag *info, int i)
 {
 	if (str[i] == '-')
 		info->minus = 1;
-	else if (str[i] == '0' && info->width == 0 && info->prec == 0)
+	else if (str[i] == '0' && info->width == 0 && info->prec == -1)
 		info->zero = 1;
 	else if (str[i] == '.')
 		info->prec = 0;
