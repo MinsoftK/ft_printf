@@ -35,7 +35,7 @@ void	put_width_str_free(t_flag *info, char **str, char **width)
 		*str = ft_strjoin(*str, *width);
 		free (temp);
 	}
-	free(width);
+	free(*width);
 }
 
 int		put_width_str(char **str, t_flag *info)
@@ -65,7 +65,7 @@ int		print_string(char *str, t_flag *info)
 	char	*temp;
 
 	sum = 0;
-	temp = str;
+
 	if (str == NULL)
 		str = "(null)";
 	if (info->prec == - 1 || (size_t)info->prec > ft_strlen(str))
