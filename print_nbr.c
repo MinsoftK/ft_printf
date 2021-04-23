@@ -122,10 +122,11 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 int		put_pointer(char **temp)
 {
 	char *ptr;
+
 	ptr = *temp;
 	*temp = ft_strjoin("0x", *temp);
 	free(ptr);
-	return(2);
+	return(ft_strlen(*temp));
 }
 
 int		put_minus(t_flag *info, char **temp)
@@ -197,7 +198,7 @@ int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
 		i++;
 	}
 	i = 1;
-	if (nbr == 0)
+	if (nbr == 0 && info->prec != 0)
 		(*temp)[res - i] ='0';
 	while (nbr)
 	{
@@ -226,7 +227,7 @@ int 	print_nbr(unsigned long long nbr, t_flag *info)
 	nbr_len = put_prec(nbr, info, &temp);
 	nbr_len += put_minus(info, &temp);
 	if (info->type == 'p')
-		nbr_len += put_pointer(&temp);
+		nbr_len = put_pointer(&temp);
 	sum = put_width_str(&temp, info);
 	sum += put_minus2(nbr_len, info, &temp);
 	ft_putstr(temp);

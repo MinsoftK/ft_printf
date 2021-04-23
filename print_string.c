@@ -121,7 +121,7 @@ void	put_width_str_free(t_flag *info, char **str, char **width)
 		*str = ft_strjoin(*str, *width);
 		free (temp);
 	}
-	free(width);
+	free(*width);
 }
 
 int		put_width_str(char **str, t_flag *info)
@@ -154,6 +154,7 @@ int		print_string(char *str, t_flag *info)
 	sum = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (str == NULL)
 		str = "(null)";
 	if (info->prec == -1 || (size_t)info->prec > ft_strlen(str))
@@ -167,6 +168,9 @@ int		print_string(char *str, t_flag *info)
 	while (str != '\0')
 =======
 	temp = str;
+=======
+
+>>>>>>> af401a1... nbr upload
 	if (str == NULL)
 		str = "(null)";
 	if (info->prec == - 1 || (size_t)info->prec > ft_strlen(str))

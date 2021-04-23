@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
@@ -23,6 +24,9 @@
 =======
 /*   Updated: 2021/04/23 14:13:50 by minsungk         ###   ########.fr       */
 >>>>>>> 0e4ebde... malloc error
+=======
+/*   Updated: 2021/04/23 16:22:14 by minsungk         ###   ########.fr       */
+>>>>>>> af401a1... nbr upload
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +67,7 @@ int		ft_nbrlen(unsigned long long nbr, t_flag *info)
 
 	i = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (nbr == 0 && info->prec != 0)
 		return (1);
 	while (nbr)
@@ -91,11 +96,14 @@ char		*nbr_baseset(char type)
 }
 =======
 	if (nbr == 0 || info->prec != 0)
+=======
+	if (nbr == 0 && info->prec != 0)
+>>>>>>> af401a1... nbr upload
 		return (1);
-	while(nbr)
+	while (nbr)
 	{
-		nbr /= info->nbr_base;
 		i++;
+		nbr /= info->nbr_base;
 	}
 	return (i);
 }
