@@ -6,7 +6,7 @@
 #    By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/06 20:24:54 by minsungk          #+#    #+#              #
-#    Updated: 2021/04/21 12:38:30 by minsungk         ###   ########.fr        #
+#    Updated: 2021/04/23 14:32:42 by minsungk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= libftprintf.a
 LIBFT		= libft
 LIBFT_LIB	= libft.a
 RM			= rm -f
-SRCS		= ./ft_printf.c ./print_char.c ./print_string.c ./utils.c 
+SRCS		= ./ft_printf.c ./print_char.c ./print_string.c ./print_nbr.c ./utils.c 
 OBJS 		= $(SRCS:.c=.o)
 INCS		= .
 CC			= gcc

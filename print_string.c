@@ -26,13 +26,13 @@ void	put_width_str_free(t_flag *info, char **str, char **width)
 	if (info->minus == 0)
 	{
 		temp = *str;
-		*str = ft_strjoin(width, *str);
+		*str = ft_strjoin(*width, *str);
 		free (temp);
 	}
 	else
 	{
 		temp = *str;
-		*str = ft_strjoin(*str, width); //동적할당 해제
+		*str = ft_strjoin(*str, *width);
 		free (temp);
 	}
 	free(width);
