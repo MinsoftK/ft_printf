@@ -11,6 +11,7 @@ int main()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int i = 198;
 	printf("-->|%-0.10d|<--\n", 198);
 	ft_printf("-->|%-0.10i|<--\n", i);
@@ -55,4 +56,9 @@ int main()
 =======
 	ft_printf("--->|%10.2d|<----\n", -1111);
 >>>>>>> af401a1... nbr upload
+=======
+	int i = 198;
+	printf("-->|%04i|<--\n", i);
+	ft_printf("-->|%04i|<--\n", i);
+>>>>>>> c85580d... %04i error
 }
