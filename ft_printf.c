@@ -20,6 +20,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -63,11 +64,15 @@
 =======
 /*   Updated: 2021/04/24 14:33:15 by minsungk         ###   ########.fr       */
 >>>>>>> c706d34... add 42 header
+=======
+/*   Updated: 2021/04/24 14:56:53 by minsungk         ###   ########.fr       */
+>>>>>>> 9145af5... Norm check
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,6 +91,9 @@ int		format_type(va_list ap, t_info* info)
 =======
 int		format_type(va_list ap, t_flag* info)
 >>>>>>> ee0f69d... fix error
+=======
+int		format_type(va_list ap, t_flag *info)
+>>>>>>> 9145af5... Norm check
 {
 	int sum;
 
@@ -109,27 +117,27 @@ int		format_type(va_list ap, t_flag* info)
 
 void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 {
-			if (ft_isdigit(str[i]))
+	if (ft_isdigit(str[i]))
+	{
+		if (info->prec == -1)
+			info->width = info->width * 10 + str[i] - 48;
+		else
+			info->prec = info->prec * 10 + str[i] - 48;
+	}
+	else if (str[i] == '*')
+	{
+		if (info->prec == -1)
 		{
-			if (info->prec == -1)
-				info->width = info->width * 10 + str[i] - 48;
-			else
-				info->prec = info->prec * 10 + str[i] - 48;
-		}
-		else if (str[i] == '*')
-		{
-			if (info->prec == - 1)
+			info->width = va_arg(ap, int);
+			if (info->width < 0)
 			{
-				info->width = va_arg(ap, int);
-				if (info->width < 0)
-				{
-					info->minus = 1;
-					info->width *= -1;
-				}
+				info->minus = 1;
+				info->width *= -1;
 			}
-			else
-				info->prec = va_arg(ap, int);
 		}
+		else
+			info->prec = va_arg(ap, int);
+	}
 }
 
 void	check_format(va_list ap, char *str, t_flag *info, int i)
@@ -141,7 +149,7 @@ void	check_format(va_list ap, char *str, t_flag *info, int i)
 	else if (str[i] == '.')
 		info->prec = 0;
 	else if (ft_isdigit(str[i]) || str[i] == '*')
-		check_width_prec(ap, str, info, i);	
+		check_width_prec(ap, str, info, i);
 }
 
 <<<<<<< HEAD
@@ -218,15 +226,19 @@ int		parse_format(va_list ap, char *str)
 =======
 int		parse_format(va_list ap, char *str)
 {
-	int 	i;
-	int 	sum;
-	t_flag 	*info;
+	int		i;
+	int		sum;
+	t_flag	*info;
 
 	i = 0;
 	sum = 0;
+<<<<<<< HEAD
 	info = malloc(sizeof(t_flag) * 1);
 	if (!info)
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+	if (!make_info(info))
+>>>>>>> 9145af5... Norm check
 		return (-1);
 	while (str[i] != '\0')
 	{
@@ -307,10 +319,14 @@ int		ft_printf(const char *str, ...)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	va_list		ap;
 =======
 	va_list 	ap;
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+	va_list		ap;
+>>>>>>> 9145af5... Norm check
 	int			sum;
 
 	va_start(ap, str);

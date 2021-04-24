@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
@@ -27,11 +28,15 @@
 =======
 /*   Updated: 2021/04/23 16:22:14 by minsungk         ###   ########.fr       */
 >>>>>>> af401a1... nbr upload
+=======
+/*   Updated: 2021/04/24 14:58:45 by minsungk         ###   ########.fr       */
+>>>>>>> 9145af5... Norm check
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,6 +50,9 @@ int		init_info(t_flag *info)
 =======
 void	init_info(t_flag *info)
 >>>>>>> 8c77b60... fix makefile && Update printf
+=======
+void		init_info(t_flag *info)
+>>>>>>> 9145af5... Norm check
 {
 	info->minus = 0;
 	info->zero = 0;
@@ -58,10 +66,22 @@ void	init_info(t_flag *info)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 int			ft_nbrlen(unsigned long long nbr, t_flag *info)
 =======
 int		ft_nbrlen(unsigned long long nbr, t_flag *info)
 >>>>>>> 395bf79... nbr 처리]
+=======
+int			make_info(t_flag *info)
+{
+	info = malloc(sizeof(t_flag) * 1);
+	if (!info)
+		return (0);
+	return (1);
+}
+
+int			ft_nbrlen(unsigned long long nbr, t_flag *info)
+>>>>>>> 9145af5... Norm check
 {
 	int i;
 

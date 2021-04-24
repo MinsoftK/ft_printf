@@ -14,6 +14,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
@@ -39,6 +40,9 @@
 =======
 /*   Updated: 2021/04/24 14:33:26 by minsungk         ###   ########.fr       */
 >>>>>>> c706d34... add 42 header
+=======
+/*   Updated: 2021/04/24 15:04:55 by minsungk         ###   ########.fr       */
+>>>>>>> 9145af5... Norm check
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +71,16 @@ typedef struct	s_flag
 ****************Main***********
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9145af5... Norm check
 
 int				ft_printf(const char *str, ...);
 int				parse_format(va_list ap, char *str);
 void			check_format(va_list ap, char *str, t_flag *info, int i);
 void			check_width_prec(va_list ap, char *str, t_flag *info, int i);
 int				format_type(va_list ap, t_flag *info);
+<<<<<<< HEAD
 
 /*
 ****************Print***********
@@ -99,11 +107,14 @@ int		parse_format(va_list ap, char *str);
 void	check_format(va_list ap, char *str, t_flag *info, int i);
 void	check_width_prec(va_list ap, char *str, t_flag *info, int i);
 int		format_type(va_list ap, t_flag* info);
+=======
+>>>>>>> 9145af5... Norm check
 
 /*
 ****************Print***********
 >>>>>>> c59ed9d... Update header
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,10 +140,26 @@ int		put_pointer(char **temp);
 int		put_minus(t_flag *info, char **temp);
 int		put_minus2(int nbr_len, t_flag *info, char **temp);
 int		put_prec(unsigned long long nbr, t_flag *info, char **temp);
+=======
+
+int				print_char(int point, t_flag *info);
+int				put_width(int width, int len, int zero);
+int				print_string(char *str, t_flag *info);
+char			*prec_str(char *str, int prec_len, int len);
+int				put_width_str(char **str, t_flag *info);
+void			put_width_str_free(t_flag *info, char **str, char **width);
+int				print_nbr(unsigned long long nbr, t_flag *info);
+int				nbr_put_pointer(char **temp);
+int				nbr_put_minus(t_flag *info, char **temp);
+int				nbr_put_minus2(int nbr_len, t_flag *info, char **temp);
+int				prec_nbr(unsigned long long nbr, t_flag *info, 
+char **temp, int i);
+>>>>>>> 9145af5... Norm check
 
 /*
 ****************Util***********
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 int		init_info(t_flag *info);
 >>>>>>> efa964b... fix error
@@ -147,5 +174,12 @@ int		ft_nbrlen(unsigned long long nbr, t_flag *info);
 =======
 char	*nbr_baseset(char type);
 >>>>>>> 8799042... test
+=======
+
+void			init_info(t_flag *info);
+int				make_infdo(t_flag *info);
+int				ft_nbrlen(unsigned long long nbr, t_flag *info);
+char			*nbr_baseset(char type);
+>>>>>>> 9145af5... Norm check
 
 #endif
