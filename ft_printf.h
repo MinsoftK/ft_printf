@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 15:04:55 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:05:21 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int				print_nbr(unsigned long long nbr, t_flag *info);
 int				nbr_put_pointer(char **temp);
 int				nbr_put_minus(t_flag *info, char **temp);
 int				nbr_put_minus2(int nbr_len, t_flag *info, char **temp);
-int				prec_nbr(unsigned long long nbr, t_flag *info, 
+int				prec_nbr(unsigned long long nbr, t_flag *info,
 char **temp, int i);
 
 /*
