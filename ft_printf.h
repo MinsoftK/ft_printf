@@ -15,6 +15,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
@@ -43,6 +44,9 @@
 =======
 /*   Updated: 2021/04/24 15:04:55 by minsungk         ###   ########.fr       */
 >>>>>>> 9145af5... Norm check
+=======
+/*   Updated: 2021/04/24 15:05:21 by minsungk         ###   ########.fr       */
+>>>>>>> 6d8d454... Norm check
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +101,7 @@ int				nbr_put_pointer(char **temp);
 int				nbr_put_minus(t_flag *info, char **temp);
 int				nbr_put_minus2(int nbr_len, t_flag *info, char **temp);
 int				prec_nbr(unsigned long long nbr, t_flag *info,
+<<<<<<< HEAD
 char **temp, int i);
 
 /*
@@ -153,6 +158,8 @@ int				nbr_put_pointer(char **temp);
 int				nbr_put_minus(t_flag *info, char **temp);
 int				nbr_put_minus2(int nbr_len, t_flag *info, char **temp);
 int				prec_nbr(unsigned long long nbr, t_flag *info, 
+=======
+>>>>>>> 6d8d454... Norm check
 char **temp, int i);
 >>>>>>> 9145af5... Norm check
 
