@@ -4,6 +4,6 @@
 int main()
 {
 	int i = 198;
-	printf("-->|%04i|<--\n", i);
-	ft_printf("-->|%04i|<--\n", i);
+	printf("-->|%.*i|<--\n", -10, i);
+	ft_printf("-->|%0.-4i|<--\n", i);
 }

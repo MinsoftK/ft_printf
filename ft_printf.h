@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:12:27 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 15:05:21 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char **temp, int i);
 */
 
 void			init_info(t_flag *info);
-int				make_infdo(t_flag *info);
+int				make_info(t_flag *info);
 int				ft_nbrlen(unsigned long long nbr, t_flag *info);
 char			*nbr_baseset(char type);
 

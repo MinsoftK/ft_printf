@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 14:56:53 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:34:06 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		parse_format(va_list ap, char *str)
 
 	i = 0;
 	sum = 0;
-	if (!make_info(info))
+	if (!(info = malloc(sizeof(t_flag) * 1)))
 		return (-1);
 	while (str[i] != '\0')
 	{
