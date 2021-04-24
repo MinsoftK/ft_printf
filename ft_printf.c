@@ -6,12 +6,11 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/23 17:01:44 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 14:33:15 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int		format_type(va_list ap, t_flag* info)
 {
