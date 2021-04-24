@@ -16,6 +16,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 16:27:58 by minsungk         ###   ########.fr       */
@@ -47,6 +48,9 @@
 =======
 /*   Updated: 2021/04/24 15:05:21 by minsungk         ###   ########.fr       */
 >>>>>>> 6d8d454... Norm check
+=======
+/*   Updated: 2021/04/24 15:06:51 by minsungk         ###   ########.fr       */
+>>>>>>> 04cde6c... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,7 +188,7 @@ char	*nbr_baseset(char type);
 =======
 
 void			init_info(t_flag *info);
-int				make_infdo(t_flag *info);
+int				make_info(t_flag *info);
 int				ft_nbrlen(unsigned long long nbr, t_flag *info);
 char			*nbr_baseset(char type);
 >>>>>>> 9145af5... Norm check

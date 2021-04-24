@@ -21,6 +21,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -67,6 +68,9 @@
 =======
 /*   Updated: 2021/04/24 14:56:53 by minsungk         ###   ########.fr       */
 >>>>>>> 9145af5... Norm check
+=======
+/*   Updated: 2021/04/24 15:34:06 by minsungk         ###   ########.fr       */
+>>>>>>> 04cde6c... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -223,6 +227,7 @@ int		parse_format(va_list ap, char *str)
 	i = 0;
 	sum = 0;
 	if (!(info = malloc(sizeof(t_flag) * 1)))
+<<<<<<< HEAD
 =======
 int		parse_format(va_list ap, char *str)
 {
@@ -239,6 +244,8 @@ int		parse_format(va_list ap, char *str)
 =======
 	if (!make_info(info))
 >>>>>>> 9145af5... Norm check
+=======
+>>>>>>> 04cde6c... test
 		return (-1);
 	while (str[i] != '\0')
 	{

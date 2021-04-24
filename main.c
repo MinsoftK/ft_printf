@@ -58,7 +58,12 @@ int main()
 >>>>>>> af401a1... nbr upload
 =======
 	int i = 198;
+<<<<<<< HEAD
 	printf("-->|%04i|<--\n", i);
 	ft_printf("-->|%04i|<--\n", i);
 >>>>>>> c85580d... %04i error
+=======
+	printf("-->|%.*i|<--\n", -10, i);
+	ft_printf("-->|%0.-4i|<--\n", i);
+>>>>>>> 04cde6c... test
 }

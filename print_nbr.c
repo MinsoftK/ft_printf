@@ -12,6 +12,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 14:35:18 by minsungk          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:50 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -130,6 +131,9 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 14:35:18 by minsungk          #+#    #+#             */
 /*   Updated: 2021/04/24 14:47:39 by minsungk         ###   ########.fr       */
+=======
+/*   Updated: 2021/04/24 15:35:10 by minsungk         ###   ########.fr       */
+>>>>>>> 04cde6c... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,7 +211,6 @@ int		prec_nbr(unsigned long long nbr, t_flag *info, char **temp, int i)
 	if (!(*temp))
 		return (0);
 	(*temp)[res] = '\0';
-	i = 0;
 	while (nbr_len + i < res)
 	{
 		(*temp)[i] = '0';
@@ -234,6 +237,7 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 	int		i;
 
 	sum = 0;
+	i = 0;
 	if (info->type == 'x' || info->type == 'X' || info->type == 'p')
 		info->nbr_base = 16;
 	if ((info->type == 'd' || info->type == 'i') && (int)nbr < 0)
@@ -244,7 +248,7 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 	nbr_len = prec_nbr(nbr, info, &temp, i);
 	nbr_len += nbr_put_minus(info, &temp);
 	if (info->type == 'p')
-		nbr_len = put_pointer(&temp);
+		nbr_len = nbr_put_pointer(&temp);
 	sum = put_width_str(&temp, info);
 	sum += nbr_put_minus2(nbr_len, info, &temp);
 	ft_putstr(temp);

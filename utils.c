@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
@@ -31,6 +32,9 @@
 =======
 /*   Updated: 2021/04/24 14:58:45 by minsungk         ###   ########.fr       */
 >>>>>>> 9145af5... Norm check
+=======
+/*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
+>>>>>>> 04cde6c... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +71,7 @@ void		init_info(t_flag *info)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 int			ft_nbrlen(unsigned long long nbr, t_flag *info)
 =======
 int		ft_nbrlen(unsigned long long nbr, t_flag *info)
@@ -80,6 +85,8 @@ int			make_info(t_flag *info)
 	return (1);
 }
 
+=======
+>>>>>>> 04cde6c... test
 int			ft_nbrlen(unsigned long long nbr, t_flag *info)
 >>>>>>> 9145af5... Norm check
 {
