@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   print_nbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minsungk <minsungk@stu.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 14:35:18 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 14:35:20 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 14:47:39 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		put_pointer(char **temp)
+int		nbr_put_pointer(char **temp)
 {
 	char *ptr;
 
 	ptr = *temp;
 	*temp = ft_strjoin("0x", *temp);
 	free(ptr);
-	return(ft_strlen(*temp));
+	return (ft_strlen(*temp));
 }
 
-int		put_minus(t_flag *info, char **temp)
+int		nbr_put_minus(t_flag *info, char **temp)
 {
 	char	*ptr;
 	int		sum;
@@ -41,10 +41,10 @@ int		put_minus(t_flag *info, char **temp)
 	return (sum);
 }
 
-int		put_minus2(int nbr_len, t_flag *info, char **temp)
+int		nbr_put_minus2(int nbr_len, t_flag *info, char **temp)
 {
-	int sum;
-	char *ptr;
+	int		sum;
+	char	*ptr;
 
 	sum = 0;
 	if (info->zero == 1 && info->nbr_sign == -1)
@@ -62,27 +62,26 @@ int		put_minus2(int nbr_len, t_flag *info, char **temp)
 	return (sum);
 }
 
-int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
+int		prec_nbr(unsigned long long nbr, t_flag *info, char **temp, int i)
 {
 	int		nbr_len;
 	int		res;
-	int		i;
 
 	nbr_len = ft_nbrlen(nbr, info);
 	res = (info->prec > nbr_len) ? info->prec : nbr_len;
-	*temp = (char *)malloc (sizeof(char) * res + 1);
-	if(!(*temp))
+	*temp = (char *)malloc(sizeof(char) * res + 1);
+	if (!(*temp))
 		return (0);
 	(*temp)[res] = '\0';
 	i = 0;
-	while(nbr_len + i < res)
+	while (nbr_len + i < res)
 	{
 		(*temp)[i] = '0';
 		i++;
 	}
 	i = 1;
 	if (nbr == 0 && info->prec != 0)
-		(*temp)[res - i] ='0';
+		(*temp)[res - i] = '0';
 	while (nbr)
 	{
 		(*temp)[res - i] = nbr_baseset(info->type)[nbr % info->nbr_base];
@@ -92,11 +91,12 @@ int		put_prec(unsigned long long nbr, t_flag *info, char **temp)
 	return (nbr_len);
 }
 
-int 	print_nbr(unsigned long long nbr, t_flag *info)
+int		print_nbr(unsigned long long nbr, t_flag *info)
 {
 	char	*temp;
 	int		nbr_len;
 	int		sum;
+	int		i;
 
 	sum = 0;
 	if (info->type == 'x' || info->type == 'X' || info->type == 'p')
@@ -106,12 +106,12 @@ int 	print_nbr(unsigned long long nbr, t_flag *info)
 		info->nbr_sign = -1;
 		nbr = -nbr;
 	}
-	nbr_len = put_prec(nbr, info, &temp);
-	nbr_len += put_minus(info, &temp);
+	nbr_len = prec_nbr(nbr, info, &temp, i);
+	nbr_len += nbr_put_minus(info, &temp);
 	if (info->type == 'p')
 		nbr_len = put_pointer(&temp);
 	sum = put_width_str(&temp, info);
-	sum += put_minus2(nbr_len, info, &temp);
+	sum += nbr_put_minus2(nbr_len, info, &temp);
 	ft_putstr(temp);
 	free(temp);
 	return (sum);

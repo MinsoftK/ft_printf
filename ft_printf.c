@@ -6,13 +6,13 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 14:33:15 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 14:56:53 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		format_type(va_list ap, t_flag* info)
+int		format_type(va_list ap, t_flag *info)
 {
 	int sum;
 
@@ -36,27 +36,27 @@ int		format_type(va_list ap, t_flag* info)
 
 void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 {
-			if (ft_isdigit(str[i]))
+	if (ft_isdigit(str[i]))
+	{
+		if (info->prec == -1)
+			info->width = info->width * 10 + str[i] - 48;
+		else
+			info->prec = info->prec * 10 + str[i] - 48;
+	}
+	else if (str[i] == '*')
+	{
+		if (info->prec == -1)
 		{
-			if (info->prec == -1)
-				info->width = info->width * 10 + str[i] - 48;
-			else
-				info->prec = info->prec * 10 + str[i] - 48;
-		}
-		else if (str[i] == '*')
-		{
-			if (info->prec == - 1)
+			info->width = va_arg(ap, int);
+			if (info->width < 0)
 			{
-				info->width = va_arg(ap, int);
-				if (info->width < 0)
-				{
-					info->minus = 1;
-					info->width *= -1;
-				}
+				info->minus = 1;
+				info->width *= -1;
 			}
-			else
-				info->prec = va_arg(ap, int);
 		}
+		else
+			info->prec = va_arg(ap, int);
+	}
 }
 
 void	check_format(va_list ap, char *str, t_flag *info, int i)
@@ -68,19 +68,18 @@ void	check_format(va_list ap, char *str, t_flag *info, int i)
 	else if (str[i] == '.')
 		info->prec = 0;
 	else if (ft_isdigit(str[i]) || str[i] == '*')
-		check_width_prec(ap, str, info, i);	
+		check_width_prec(ap, str, info, i);
 }
 
 int		parse_format(va_list ap, char *str)
 {
-	int 	i;
-	int 	sum;
-	t_flag 	*info;
+	int		i;
+	int		sum;
+	t_flag	*info;
 
 	i = 0;
 	sum = 0;
-	info = malloc(sizeof(t_flag) * 1);
-	if (!info)
+	if (!make_info(info))
 		return (-1);
 	while (str[i] != '\0')
 	{
@@ -103,7 +102,7 @@ int		parse_format(va_list ap, char *str)
 
 int		ft_printf(const char *str, ...)
 {
-	va_list 	ap;
+	va_list		ap;
 	int			sum;
 
 	va_start(ap, str);

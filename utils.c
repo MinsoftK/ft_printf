@@ -6,13 +6,13 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/23 16:22:14 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/24 14:58:45 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	init_info(t_flag *info)
+void		init_info(t_flag *info)
 {
 	info->minus = 0;
 	info->zero = 0;
@@ -23,7 +23,15 @@ void	init_info(t_flag *info)
 	info->nbr_sign = 1;
 }
 
-int		ft_nbrlen(unsigned long long nbr, t_flag *info)
+int			make_info(t_flag *info)
+{
+	info = malloc(sizeof(t_flag) * 1);
+	if (!info)
+		return (0);
+	return (1);
+}
+
+int			ft_nbrlen(unsigned long long nbr, t_flag *info)
 {
 	int i;
 
