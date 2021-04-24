@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c706d34... add 42 header
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   print_nbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+<<<<<<< HEAD
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 14:35:18 by minsungk          #+#    #+#             */
@@ -117,6 +121,15 @@ int		print_nbr(unsigned long long nbr, t_flag *info)
 	free(temp);
 	return (sum);
 =======
+=======
+/*   By: minsungk <minsungk@stu.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/24 14:35:18 by minsungk          #+#    #+#             */
+/*   Updated: 2021/04/24 14:35:20 by minsungk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+>>>>>>> c706d34... add 42 header
 #include "ft_printf.h"
 
 int		put_pointer(char **temp)

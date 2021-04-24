@@ -19,6 +19,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -59,11 +60,13 @@
 =======
 /*   Updated: 2021/04/23 17:01:44 by minsungk         ###   ########.fr       */
 >>>>>>> dbdb21a... test is complete
+=======
+/*   Updated: 2021/04/24 14:33:15 by minsungk         ###   ########.fr       */
+>>>>>>> c706d34... add 42 header
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
