@@ -6,15 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 15:05:23 by minsungk          #+#    #+#             */
-<<<<<<< HEAD
-<<<<<<< HEAD
 /*   Updated: 2021/04/20 16:38:19 by minsungk         ###   ########.fr       */
-=======
-/*   Updated: 2021/04/20 16:24:00 by minsungk         ###   ########.fr       */
->>>>>>> 8c77b60... fix makefile && Update printf
-=======
-/*   Updated: 2021/04/20 16:38:19 by minsungk         ###   ########.fr       */
->>>>>>> 72c2209... fix header
 /*                                                                            */
 /* ************************************************************************** */
 

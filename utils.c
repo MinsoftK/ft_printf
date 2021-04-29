@@ -6,95 +6,28 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 19:25:48 by minsungk          #+#    #+#             */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 /*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
-=======
-/*   Updated: 2021/04/20 16:24:20 by minsungk         ###   ########.fr       */
->>>>>>> 8c77b60... fix makefile && Update printf
-=======
-/*   Updated: 2021/04/21 16:03:31 by minsungk         ###   ########.fr       */
->>>>>>> 395bf79... nbr 처리]
-=======
-/*   Updated: 2021/04/22 16:25:41 by minsungk         ###   ########.fr       */
->>>>>>> 8799042... test
-=======
-/*   Updated: 2021/04/23 14:13:50 by minsungk         ###   ########.fr       */
->>>>>>> 0e4ebde... malloc error
-=======
-/*   Updated: 2021/04/23 16:22:14 by minsungk         ###   ########.fr       */
->>>>>>> af401a1... nbr upload
-=======
-/*   Updated: 2021/04/24 14:58:45 by minsungk         ###   ########.fr       */
->>>>>>> 9145af5... Norm check
-=======
-/*   Updated: 2021/04/24 15:33:09 by minsungk         ###   ########.fr       */
->>>>>>> 04cde6c... test
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 void		init_info(t_flag *info)
-=======
-int		init_info(t_info *info)
->>>>>>> eaba386... backup
-=======
-int		init_info(t_flag *info)
->>>>>>> efa964b... fix error
-=======
-void	init_info(t_flag *info)
->>>>>>> 8c77b60... fix makefile && Update printf
-=======
-void		init_info(t_flag *info)
->>>>>>> 9145af5... Norm check
 {
 	info->minus = 0;
 	info->zero = 0;
 	info->width = 0;
 	info->prec = -1;
 	info->type = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
 	info->nbr_base = 10;
 	info->nbr_sign = 1;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 int			ft_nbrlen(unsigned long long nbr, t_flag *info)
-=======
-int		ft_nbrlen(unsigned long long nbr, t_flag *info)
->>>>>>> 395bf79... nbr 처리]
-=======
-int			make_info(t_flag *info)
-{
-	info = malloc(sizeof(t_flag) * 1);
-	if (!info)
-		return (0);
-	return (1);
-}
-
-=======
->>>>>>> 04cde6c... test
-int			ft_nbrlen(unsigned long long nbr, t_flag *info)
->>>>>>> 9145af5... Norm check
 {
 	int i;
 
 	i = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
 	if (nbr == 0 && info->prec != 0)
 		return (1);
 	while (nbr)
@@ -114,38 +47,4 @@ char		*nbr_baseset(char type)
 	else if (type == 'X')
 		return ("0123456789ABCDEF");
 	return (0);
-=======
->>>>>>> eaba386... backup
-=======
-	info->nbr_base = 10;
-	info->nbr_sign = 1;
->>>>>>> 95e07a6... test
 }
-=======
-	if (nbr == 0 || info->prec != 0)
-=======
-	if (nbr == 0 && info->prec != 0)
->>>>>>> af401a1... nbr upload
-		return (1);
-	while (nbr)
-	{
-		i++;
-		nbr /= info->nbr_base;
-	}
-	return (i);
-}
-<<<<<<< HEAD
->>>>>>> 395bf79... nbr 처리]
-=======
-
-char		*nbr_baseset(char type)
-{
-	if (type == 'u' || type == 'd' || type == 'i')
-		return ("0123456789");
-	else if (type == 'x' || type == 'p')
-		return ("0123456789abcdef");
-	else if (type == 'X')
-		return ("0123456789ABCDEF");
-	return (0);
-}
->>>>>>> 8799042... test
