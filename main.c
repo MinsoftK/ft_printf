@@ -15,6 +15,7 @@ int main()
 	int i = 198;
 	printf("-->|%-0.10d|<--\n", 198);
 	ft_printf("-->|%-0.10i|<--\n", i);
+<<<<<<< HEAD
 =======
 #include "ft_printf.c"
 =======
@@ -66,4 +67,6 @@ int main()
 	printf("-->|%.*i|<--\n", -10, i);
 	ft_printf("-->|%0.-4i|<--\n", i);
 >>>>>>> 04cde6c... test
+=======
+>>>>>>> fdb9144... test
 }

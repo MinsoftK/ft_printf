@@ -22,6 +22,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 =======
 /*   Updated: 2021/03/30 15:04:41 by minsungk         ###   ########.fr       */
@@ -71,6 +72,9 @@
 =======
 /*   Updated: 2021/04/24 15:34:06 by minsungk         ###   ########.fr       */
 >>>>>>> 04cde6c... test
+=======
+/*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
+>>>>>>> fdb9144... test
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +135,7 @@ void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 	else if (str[i] == '*')
 	{
 		if (info->prec == -1)
-		{
+		{ 
 			info->width = va_arg(ap, int);
 			if (info->width < 0)
 			{
