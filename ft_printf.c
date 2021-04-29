@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:40 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 15:34:06 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/26 19:31:52 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	check_width_prec(va_list ap, char *str, t_flag *info, int i)
 	else if (str[i] == '*')
 	{
 		if (info->prec == -1)
-		{
+		{ 
 			info->width = va_arg(ap, int);
 			if (info->width < 0)
 			{

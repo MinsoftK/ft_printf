@@ -6,7 +6,7 @@
 /*   By: minsungk <minsungk@stduent.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 14:35:18 by minsungk          #+#    #+#             */
-/*   Updated: 2021/04/24 15:35:10 by minsungk         ###   ########.fr       */
+/*   Updated: 2021/04/26 19:31:50 by minsungk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int		prec_nbr(unsigned long long nbr, t_flag *info, char **temp, int i)
 {
 	int		nbr_len;
 	int		res;
-
+	
 	nbr_len = ft_nbrlen(nbr, info);
 	res = (info->prec > nbr_len) ? info->prec : nbr_len;
 	*temp = (char *)malloc(sizeof(char) * res + 1);
